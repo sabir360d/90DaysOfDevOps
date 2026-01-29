@@ -3,7 +3,7 @@
 ## 1. Process Management
 - ps aux = list all running processes
 - top = live CPU and memory usage
-- htop = interactive process viewer (if installed)
+- htop = interactive, human-readable process viewer
 - kill <PID> = terminate a process
 - uptime = system load and uptime
 
