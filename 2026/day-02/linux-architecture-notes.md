@@ -1,6 +1,7 @@
 **Linux Architecture, Processes, and systemd**
 
 **1. Core Components of Linux**
+
 **Kernel**
 - The **core of the operating system**
 - Directly interacts with hardware:
