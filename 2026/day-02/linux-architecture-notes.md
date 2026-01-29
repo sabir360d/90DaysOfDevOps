@@ -37,7 +37,6 @@
 **3. Processes in Linux**
 - Every running program is a **process**
 - Each process has a **Process ID (PID)**
-- Processes are created using `fork()` and `exec()`
 
 **Common Process States**
 - **Running (R)** – currently executing
