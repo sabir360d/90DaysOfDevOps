@@ -44,13 +44,7 @@
 - **Sleeping (S)** – waiting for input or resource
 - **Zombie (Z)** – finished but not cleaned up by parent
 
-**4. How Linux Manages Processes**
-- Kernel schedules processes using CPU time slices
-- Parent processes create child processes
-- systemd manages long-running background services
-- Failed services can be automatically restarted
-
-**5. systemd and Why It Matters**
+**4. systemd and Why It Matters**
 - Controls:
   - Service startup
   - Service monitoring
@@ -67,7 +61,7 @@ systemctl status <service>
 systemctl restart <service>
 systemctl enable <service>
 
-**6. Daily Linux Commands (DevOps Use)**
+**5. Daily Linux Commands (DevOps Use)**
 
 1. ps – view running processes
 2. top – monitor CPU and memory usage
@@ -75,7 +69,7 @@ systemctl enable <service>
 4. df -h – check disk usage
 5. free -h – check memory usage
 
-**7. Why This Matters for DevOps**
+**6. Why This Matters for DevOps**
 
 - Linux is the base of most production systems
 - Understanding processes helps:
