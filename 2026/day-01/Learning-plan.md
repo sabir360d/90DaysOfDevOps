@@ -1,4 +1,4 @@
-# 90 Days of DevOps with Agentic AI – Learning Plan
+# 90 Days of DevOps – Learning Plan
 
 ## Understanding of DevOps & Cloud Engineering
 DevOps is a **culture, mindset & set of practices** that enables faster, reliable software delivery through automation, collaboration, and shared ownership between development and operations.
