@@ -55,11 +55,11 @@
 - Central tool for managing production servers
 
 **Useful systemd Commands**
-systemctl start <service>
-systemctl stop <service>
-systemctl status <service>
-systemctl restart <service>
-systemctl enable <service>
+- systemctl start <service>
+- systemctl stop <service>
+- systemctl status <service>
+- systemctl restart <service>
+- systemctl enable <service>
 
 **5. Daily Linux Commands (DevOps Use)**
 
