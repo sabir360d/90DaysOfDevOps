@@ -26,15 +26,13 @@ By the end of 90 days, I will:
 - Containers & Kubernetes fundamentals  
 
 ## Time Management
-- **Weekdays:** 2–2.5 hours/day  
-- **Weekends:** 4–6 hours/day  
-- **Weekly Total:** ~18–22 hours  
+- **Weekdays:** 2-2.5 hours/day  
+- **Weekends:** 4-6 hours/day  
+- **Weekly Total:** Approximately 18-22 hours  
 
 Consistency approach:
 - Practice daily, even with small progress
 - Focus on discipline over motivation
 - Complete assignments, labs, and projects
 - Learn in public by sharing progress
-
-## This 90-day plan is my **commitment**.
   
