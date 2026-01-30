@@ -1,3 +1,13 @@
+# Day 04 – Linux Practice: Processes and Services
+
+---
+
+## Process Checks
+
+**`ps -p $$`**
+
+**`pgrep -l ssh`**
+
 ```text
 root@ip-172-31-15-139:/home/ubuntu# ps -p $$
     PID TTY          TIME CMD
@@ -8,89 +18,63 @@ root@ip-172-31-15-139:/home/ubuntu# pgrep -l ssh
 1120 sshd
 1786 sshd
 2869 sshd
+```
+
+## Service Checks
+
+**`systemctl status ssh`**
+
+**`systemctl is-enabled ssh`**
+
+```text
 root@ip-172-31-15-139:/home/ubuntu# systemctl status ssh
 ● ssh.service - OpenBSD Secure Shell server
      Loaded: loaded (/usr/lib/systemd/system/ssh.service; enabled; preset: enabled)
-    Drop-In: /usr/lib/systemd/system/ssh.service.d
-             └─ec2-instance-connect.conf
      Active: active (running) since Fri 2026-01-30 03:04:56 CST; 2min 4s ago
-TriggeredBy: ● ssh.socket
-       Docs: man:sshd(8)
-             man:sshd_config(5)
-    Process: 2868 ExecStartPre=/usr/sbin/sshd -t (code=exited, status=0/SUCCESS)
-   Main PID: 2869 (sshd)
-      Tasks: 3 (limit: 1017)
-     Memory: 7.5M (peak: 8.7M)
-        CPU: 17ms
-     CGroup: /system.slice/ssh.service
-             ├─1005 "sshd: /usr/sbin/sshd -D -o AuthorizedKeysCommand /usr/share/ec2-instance-connect/eic_run_authorized>
-             ├─1786 "sshd: /usr/sbin/sshd -D -o AuthorizedKeysCommand /usr/share/ec2-instance-connect/eic_run_authorized>
-             └─2869 "sshd: /usr/sbin/sshd -D -o AuthorizedKeysCommand /usr/share/ec2-instance-connect/eic_run_authorized>
 
-Jan 30 03:04:56 ip-172-31-15-139 systemd[1]: Starting ssh.service - OpenBSD Secure Shell server...
-Jan 30 03:04:56 ip-172-31-15-139 systemd[1]: ssh.service: Found left-over process 1005 (sshd) in control group while sta>
-Jan 30 03:04:56 ip-172-31-15-139 systemd[1]: ssh.service: This usually indicates unclean termination of a previous run, >
-Jan 30 03:04:56 ip-172-31-15-139 systemd[1]: ssh.service: Found left-over process 1786 (sshd) in control group while sta>
-Jan 30 03:04:56 ip-172-31-15-139 systemd[1]: ssh.service: This usually indicates unclean termination of a previous run, >
-Jan 30 03:04:56 ip-172-31-15-139 sshd[2869]: Server listening on 0.0.0.0 port 22.
-Jan 30 03:04:56 ip-172-31-15-139 sshd[2869]: Server listening on :: port 22.
-Jan 30 03:04:56 ip-172-31-15-139 systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
 root@ip-172-31-15-139:/home/ubuntu# systemctl is-enabled ssh
 enabled
-root@ip-172-31-15-139:/home/ubuntu# journalctl -u ssh -n 5 --no-pager
-Jan 30 03:04:56 ip-172-31-15-139 systemd[1]: ssh.service: Found left-over process 1786 (sshd) in control group while starting unit. Ignoring.
-Jan 30 03:04:56 ip-172-31-15-139 systemd[1]: ssh.service: This usually indicates unclean termination of a previous run, or service implementation deficiencies.
-Jan 30 03:04:56 ip-172-31-15-139 sshd[2869]: Server listening on 0.0.0.0 port 22.
-Jan 30 03:04:56 ip-172-31-15-139 sshd[2869]: Server listening on :: port 22.
-Jan 30 03:04:56 ip-172-31-15-139 systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
-root@ip-172-31-15-139:/home/ubuntu# sudo tail -n 5 /var/log/syslog
+
+```
+
+## Log Checks
+
+**`journalctl -u ssh -n 5 --no-pager`**
+
+**`sudo tail -n 5 /var/log/syslog`**
+
+```text
+root@ip-172-31-15-139:/home/ubuntu# journalctl -u ssh -n 2 --no-pager
+Jan 30 03:04:56 ip-172-31-15-139 systemd[1]: ssh.service: Found left-over process 1786 (sshd)
+Jan 30 03:04:56 ip-172-31-15-139 systemd[1]: ssh.service: This usually indicates termination..
+
+root@ip-172-31-15-139:/home/ubuntu# sudo tail -n 2 /var/log/syslog
 2026-01-30T03:04:56.973002-06:00 ip-172-31-15-139 systemd[1]: ssh.service: This usually indicates unclean termination of a previous run, or service implementation deficiencies.
 2026-01-30T03:04:56.973056-06:00 ip-172-31-15-139 systemd[1]: ssh.service: Found left-over process 1786 (sshd) in control group while starting unit. Ignoring.
-2026-01-30T03:04:56.973081-06:00 ip-172-31-15-139 systemd[1]: ssh.service: This usually indicates unclean termination of a previous run, or service implementation deficiencies.
-2026-01-30T03:04:56.987019-06:00 ip-172-31-15-139 systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
-2026-01-30T03:05:01.988286-06:00 ip-172-31-15-139 CRON[2873]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
-root@ip-172-31-15-139:/home/ubuntu# # Troubleshooting ssh
-root@ip-172-31-15-139:/home/ubuntu# # Unable to ssh into server
+
+```
+
+## Inspect one systemd service
+
+## Unable to ssh into server
+
+```text
 root@ip-172-31-15-139:/home/ubuntu# systemctl status ssh
 ● ssh.service - OpenBSD Secure Shell server
      Loaded: loaded (/usr/lib/systemd/system/ssh.service; enabled; preset: enabled)
-    Drop-In: /usr/lib/systemd/system/ssh.service.d
-             └─ec2-instance-connect.conf
      Active: active (running) since Fri 2026-01-30 03:04:56 CST; 7min ago
-TriggeredBy: ● ssh.socket
-       Docs: man:sshd(8)
-             man:sshd_config(5)
-    Process: 2868 ExecStartPre=/usr/sbin/sshd -t (code=exited, status=0/SUCCESS)
-   Main PID: 2869 (sshd)
-      Tasks: 3 (limit: 1017)
-     Memory: 7.5M (peak: 8.7M)
-        CPU: 17ms
-     CGroup: /system.slice/ssh.service
-             ├─1005 "sshd: /usr/sbin/sshd -D -o AuthorizedKeysCommand /usr/share/ec2-instance-connect/eic_run_authorized>
-             ├─1786 "sshd: /usr/sbin/sshd -D -o AuthorizedKeysCommand /usr/share/ec2-instance-connect/eic_run_authorized>
-             └─2869 "sshd: /usr/sbin/sshd -D -o AuthorizedKeysCommand /usr/share/ec2-instance-connect/eic_run_authorized>
-
-Jan 30 03:04:56 ip-172-31-15-139 systemd[1]: Starting ssh.service - OpenBSD Secure Shell server...
-Jan 30 03:04:56 ip-172-31-15-139 systemd[1]: ssh.service: Found left-over process 1005 (sshd) in control group while sta>
-Jan 30 03:04:56 ip-172-31-15-139 systemd[1]: ssh.service: This usually indicates unclean termination of a previous run, >
-Jan 30 03:04:56 ip-172-31-15-139 systemd[1]: ssh.service: Found left-over process 1786 (sshd) in control group while sta>
-Jan 30 03:04:56 ip-172-31-15-139 systemd[1]: ssh.service: This usually indicates unclean termination of a previous run, >
 Jan 30 03:04:56 ip-172-31-15-139 sshd[2869]: Server listening on 0.0.0.0 port 22.
 Jan 30 03:04:56 ip-172-31-15-139 sshd[2869]: Server listening on :: port 22.
-Jan 30 03:04:56 ip-172-31-15-139 systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
+
 root@ip-172-31-15-139:/home/ubuntu# pgrep -l ssh
 1005 sshd
 1006 sshd
-1120 sshd
-1786 sshd
-2869 sshd
-root@ip-172-31-15-139:/home/ubuntu# journalctl -u ssh -n 5 --no-pager
+
+root@ip-172-31-15-139:/home/ubuntu# journalctl -u ssh -n 2 --no-pager
 Jan 30 03:04:56 ip-172-31-15-139 systemd[1]: ssh.service: Found left-over process 1786 (sshd) in control group while starting unit. Ignoring.
 Jan 30 03:04:56 ip-172-31-15-139 systemd[1]: ssh.service: This usually indicates unclean termination of a previous run, or service implementation deficiencies.
-Jan 30 03:04:56 ip-172-31-15-139 sshd[2869]: Server listening on 0.0.0.0 port 22.
-Jan 30 03:04:56 ip-172-31-15-139 sshd[2869]: Server listening on :: port 22.
-Jan 30 03:04:56 ip-172-31-15-139 systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
-root@ip-172-31-15-139:/home/ubuntu# # ssh service is running and responding.
-root@ip-172-31-15-139:/home/ubuntu# exit
-exit
+
+## ssh service is running and responding. Issues fixed.
+
 ```
+
