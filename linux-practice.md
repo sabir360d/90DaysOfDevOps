@@ -1,3 +1,4 @@
+```text
 root@ip-172-31-15-139:/home/ubuntu# ps -p $$
     PID TTY          TIME CMD
    2880 pts/2    00:00:00 bash
@@ -92,3 +93,4 @@ Jan 30 03:04:56 ip-172-31-15-139 systemd[1]: Started ssh.service - OpenBSD Secur
 root@ip-172-31-15-139:/home/ubuntu# # ssh service is running and responding.
 root@ip-172-31-15-139:/home/ubuntu# exit
 exit
+```
