@@ -16,7 +16,7 @@
 
 ## 3. Networking
 - ping <host> = test connectivity
-- ip -a = show all interfaces and IP addresses
+- ip a = show all interfaces and IP addresses
 - curl <url> = test HTTP endpoints
 - traceroute <host> = trace packet route to host
 - ss -tuln = list listening ports
