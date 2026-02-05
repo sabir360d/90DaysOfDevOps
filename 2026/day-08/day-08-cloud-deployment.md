@@ -25,9 +25,9 @@ Deploy a real web server on a cloud VM, expose it securely to the internet, and 
 
 ### Step 2: Connect via SSH
 Used PuTTY with `.ppk` private key to connect to the instance.
+![image alt](https://github.com/sabir360d/90DaysOfDevOps/blob/3f1ca8d9a6a348051e7e2dc561a063ed7aafb338/2026/day-08/putty-login.JPG)
 
 ---
-```bash
 ## Part 2: Install Nginx
 
 sudo apt update && sudo apt upgrade -y
@@ -45,6 +45,8 @@ http://<EC2-PUBLIC-IP>
 
 ***Nginx welcome page loaded successfully***
 
+![image alt](https://github.com/sabir360d/90DaysOfDevOps/blob/3f1ca8d9a6a348051e7e2dc561a063ed7aafb338/2026/day-08/nginx.JPG)
+
 ## Part 4: Extract Nginx Logs
 
 Step 1: View Logs
@@ -53,6 +55,9 @@ sudo tail /var/log/nginx/error.log
 
 Step 2: Save Logs to File
 sudo cat /var/log/nginx/access.log > ~/nginx-logs.txt
+
+**Screenshot:** `nginx-log.png`
+![image alt](https://github.com/sabir360d/90DaysOfDevOps/blob/master/2026/day-08/nginx-logs-ubuntu.JPG)
 
 Step 3: Download Logs to Local Machine (PuTTY / .ppk)
 
@@ -63,7 +68,7 @@ pscp -i your-key.ppk ubuntu@<EC2-PUBLIC-IP>:/home/ubuntu/nginx-logs.txt .
 
 To view logs on Local Machine:
 notepad nginx-logs.txt
-```
+![image alt](https://github.com/sabir360d/90DaysOfDevOps/blob/master/2026/day-08/nginx-logs-windows.JPG)
 
 ```bash
 Commands Used
