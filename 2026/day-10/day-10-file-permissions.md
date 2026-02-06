@@ -54,16 +54,19 @@
 - Tried executing notes.txt (no execute permission):
     ./notes.txt
 **Error message: bash: ./notes.txt: Permission denied**
+
 ### Files Created
     devops.txt
     notes.txt
     script.sh
     Directory: project/
+
 ### Permission Changes
     devops.txt: read-only for all
     notes.txt: 640
     script.sh: executable added
     project/: 755
+
 ### Commands Used
     touch devops.txt
     echo "These are my DevOps notes." > notes.txt
@@ -79,7 +82,8 @@
     chmod 640 notes.txt
     mkdir project
     chmod 755 project
-## What I Learned
+
+### What I Learned
 1. File permissions control who can read, write, or execute files and directories.
 2. chmod is powerful for setting permissions using symbolic (+x) or numeric (640) methods.
 3. Trying to write to read-only files or execute non-executable files results in clear permission errors, reinforcing proper access control.
