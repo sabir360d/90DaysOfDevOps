@@ -2,7 +2,7 @@
 
 ## Goal
 Consolidate core Linux fundamentals learned in Days 01–11
----
+
 ## 1.  Mindset & Learning Plan Review (Day 01)
 
 **Original Goal (Day 01):**
@@ -38,14 +38,12 @@ systemctl status ssh
 ## File Operations Performed
 1. Append text to a file:
 echo "Revision practice" >> notes.txt
-
 2. Change permissions:
 chmod 644 notes.txt
-
 3. Verify permissions:
 ls -l notes.txt
 
-# Key Takeaway:
+## Key Takeaway:
 1. Always verify changes using ls -l
 2. Small permission mistakes can block access
 
@@ -76,7 +74,7 @@ id professor
 sudo chown devtest:devtest notes.txt
 ls -l notes.txt
 
-# Result:
+## Result:
 1. Ownership updated correctly
 2. Permissions remain intact
 
@@ -95,10 +93,9 @@ ps aux | grep nginx
 Example:
 sudo chown ubuntu:ubuntu app.log
 chmod 640 app.log
-
-## Why safe:
-1. Ownership assigned explicitly
-2. Permissions allow owner/group access without exposing to others
+     ### Why safe:
+    - Ownership assigned explicitly
+    - Permissions allow owner/group access without exposing to others
 
 4. Focus for the Next 3 Days
 Master numeric chmod values
