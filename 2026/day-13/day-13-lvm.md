@@ -1,4 +1,4 @@
-# Day 13 – Linux Volume Management (LVM)
+# Day 13 – Logical Volume Management (LVM)
 
 ## Task
 Learn how to manage Linux storage flexibly using **LVM (Logical Volume Manager)** by creating, mounting, and extending logical volumes without downtime.
