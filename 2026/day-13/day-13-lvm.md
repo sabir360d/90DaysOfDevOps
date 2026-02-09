@@ -26,7 +26,7 @@ lvs         # display information about logical volumes
 - Confirm no existing LVM metadata
 - Understand current filesystem usage
 
-![Initial storage state](images/your-screenshot.jpeg)
+![Initial storage state](https://github.com/sabir360d/90DaysOfDevOps/blob/aa966c7b1119075571bc047ce47a473618146ca3/2026/day-13/screenshot/Task1-initial-storage-state.JPG)
 
 ## Task 2: Create Physical Volume (PV)
 ### Command
@@ -41,7 +41,7 @@ pvs
 - Initialize raw disk for LVM usage
 - `/dev/nvme1n1` initialized as a physical volume
 
-![Physical Volume created](images/your-screenshot.jpeg)
+![Physical Volume created](https://github.com/sabir360d/90DaysOfDevOps/blob/aa966c7b1119075571bc047ce47a473618146ca3/2026/day-13/screenshot/Task2.JPG)
 
 ## Task 3: Create Volume Group (VG)
 ### Command
@@ -56,7 +56,7 @@ vgs
 - Create volume group `devops-vg` successfully
 - Pool storage into a logical group for flexible allocation
 
-![Volume group details](images/your-screenshot.jpeg)
+![Volume group details](https://github.com/sabir360d/90DaysOfDevOps/blob/aa966c7b1119075571bc047ce47a473618146ca3/2026/day-13/screenshot/Task3.JPG)
 
 ### Task 4: Create Logical Volume (LV)
 ### Command
@@ -71,7 +71,8 @@ lvs
 - Create logical volume `app-data` with size 500MB
 - Create application storage without tying it directly to disk size
 
-![Logical volume created](images/your-screenshot.jpeg)
+![Logical volume created](https://github.com/sabir360d/90DaysOfDevOps/blob/aa966c7b1119075571bc047ce47a473618146ca3/2026/day-13/screenshot/Task3.JPG)
+![Logical volume created](https://github.com/sabir360d/90DaysOfDevOps/blob/aa966c7b1119075571bc047ce47a473618146ca3/2026/day-13/screenshot/Task4b.JPG)
 
 ## Task 5: Format and Mount Logical Volume
 ### Commands
@@ -85,7 +86,7 @@ df -h /mnt/app-data # Check Status/Verify size and usage
 - Format logical volume with `ext4`
 - Mount successfully at `/mnt/app-data`
 
-![Mounted FS](images/your-screenshot.jpeg)
+![Mounted FS](https://github.com/sabir360d/90DaysOfDevOps/blob/aa966c7b1119075571bc047ce47a473618146ca3/2026/day-13/screenshot/Task5.JPG)
 
 ## Task 6: Extend the Logical Volume
 ### Commands
@@ -98,7 +99,9 @@ df -h /mnt/app-data
 - Extend logical volume from 500MB → 700MB without unmounting
 - Filesystem resized without unmounting
 
-![Extended volume size](images/your-screenshot.jpeg)
+![Extended volume size](https://github.com/sabir360d/90DaysOfDevOps/blob/aa966c7b1119075571bc047ce47a473618146ca3/2026/day-13/screenshot/Task6.JPG)
+![Final storage state](https://github.com/sabir360d/90DaysOfDevOps/blob/aa966c7b1119075571bc047ce47a473618146ca3/2026/day-13/screenshot/final.JPG)
+![Final storage state](https://github.com/sabir360d/90DaysOfDevOps/blob/aa966c7b1119075571bc047ce47a473618146ca3/2026/day-13/screenshot/final2.JPG)
 
 ### What I Learned
 - LVM allows dynamic resizing of storage without service downtime
