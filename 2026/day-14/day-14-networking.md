@@ -21,10 +21,13 @@ Understand core networking concepts and practice real troubleshooting commands u
 
 ---
 ### Protocol Placement
-- **IP**            => Internet layer (OSI L3)
-- **TCP / UDP**     => Transport layer (OSI L4)
-- **HTTP / HTTPS**  => Application layer (OSI L7)
-- **DNS**           => Application layer (relies on UDP/TCP)
+| Protocol       | OSI Layer                     |
+|----------------|-------------------------------|
+| IP             | Internet layer (OSI L3)       |
+| TCP / UDP      | Transport layer (OSI L4)      |
+| HTTP / HTTPS   | Application layer (OSI L7)    |
+| DNS            | Application layer (relies on UDP/TCP) |
+
 ---
 ### Real Example
 - `curl https://github.com`  
