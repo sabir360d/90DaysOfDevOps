@@ -11,12 +11,13 @@ Understand core networking concepts and practice real troubleshooting commands u
 - **OSI model** is conceptual and helps isolate where a network issue occurs.
 - **TCP/IP model** is the practical stack used in modern systems.
 
-  OSI Layer       TCP/IP Layer       Examples          
- =====================================================         
-  L7–L5           Application        HTTP, HTTPS, DNS  
-  L4              Transport          TCP, UDP          
-  L3              Internet           IP, ICMP          
-  L2–L1           Link               Ethernet, Wi-Fi   
+| OSI Layer | TCP/IP Layer | Examples        |
+|-----------|--------------|-----------------|
+| L7–L5     | Application  | HTTP, HTTPS, DNS |
+| L4        | Transport    | TCP, UDP       |
+| L3        | Internet     | IP, ICMP       |
+| L2–L1     | Link         | Ethernet, Wi-Fi |
+  
 
 ---
 ### Protocol Placement
