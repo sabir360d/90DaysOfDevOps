@@ -29,7 +29,7 @@ Command executed:
 ```bash
 dig google.com
 ```
-![dig google.com](path-or-url-to-image)
+![dig google.com](https://github.com/sabir360d/90DaysOfDevOps/blob/d91153eaa1f48b250c060c423cd37d8ffdb03c77/2026/day-15/screenshots/dig_google.JPG)
 
 Let's identify the **A record** and **TTL** from the above output:
 - A: A record type (IPv4 address). In our case we have six A records (142.251.16.101 ... 142.251.16.139).
@@ -63,7 +63,7 @@ Command executed:
 bash
 ip addr show
 ```
-![ip addr show](path-or-url-to-image)
+![ip addr show](https://github.com/sabir360d/90DaysOfDevOps/blob/d91153eaa1f48b250c060c423cd37d8ffdb03c77/2026/day-15/screenshots/ip%20addr%20show.JPG)
 - `172.31.72.136` Indentified as the Private IP
 - Why? Because 172.16.0.0 – 172.31.255.255 is a Private IP range
 - Scope global here means “reachable within VPC or LAN”
@@ -122,25 +122,18 @@ Command executed:
 ```bash
 ss -tulpn
 ```
-
+![ss -tulpn](https://github.com/sabir360d/90DaysOfDevOps/blob/52d435403474888963c7bcb65e7395201e754215/2026/day-15/screenshots/ss%20-tulpn.JPG)
 Observed listening services:
 - Port `22` mapped to SSH server service (0.0.0.0:22) 
 - Port `53` mapped to DNS resolver service (127.0.0.54:53)
-
 ---
-
 ## Task 5: Putting It Together
-
 ### `curl http://myapp.com:8080`
 DNS resolves `myapp.com` to an IP address, TCP establishes the connection, HTTP is used as the protocol, and port `8080` directs traffic to the correct application service.
-
 ---
-
 ### Application cannot reach `10.0.1.50:3306`
 Verify network connectivity, firewall or security group rules, ensure MySQL is listening on port `3306`, and confirm the private IP address is reachable.
-
 ---
-
 ## Learning Highlights
 - DNS translates human-readable domain names into IP addresses  
 - CIDR notation defines network and host boundaries  
