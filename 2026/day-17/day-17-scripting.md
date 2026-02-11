@@ -12,9 +12,9 @@ Level up shell scripting skills by:
 
 ---
 
-# Task 1 – For Loop
+## Task 1: For Loop
 
-## 1. `for_loop.sh`:
+### 1.1: `for_loop.sh`:
 #### Loop through a list of 5 fruits and print each one.
 
 ```bash
@@ -35,12 +35,11 @@ done
 ```bash
 ./for_loop.sh
 ```
-
-[Insert Screenshot: Running for_loop.sh with output visible]
+![fruits](https://github.com/sabir360d/90DaysOfDevOps/blob/df86264c78b0323de51e0661cfa43f5c8554b8ef/2026/day-17/screenshots/T1.1.JPG)
 
 ---
 
-## 2. `count.sh`
+### 1.2: `count.sh`
 #### Print numbers 1 to 10 using a for loop.
 
 ```bash
@@ -53,13 +52,13 @@ do
 done
 ```
 
-[Insert Screenshot: Running count.sh]
+![Running count.sh](https://github.com/sabir360d/90DaysOfDevOps/blob/df86264c78b0323de51e0661cfa43f5c8554b8ef/2026/day-17/screenshots/T1.2.JPG)
 
 ---
 
-# Task 2 – While Loop
+## Task 2: While Loop
 
-## `countdown.sh`
+### `countdown.sh`
 
 * Take a number from the user
 * Count down to 0 using a while loop
@@ -86,13 +85,12 @@ echo "Done!"
 ./countdown.sh
 ```
 
-[Insert Screenshot: Running countdown.sh with user input]
-
+![Running count.sh](https://github.com/sabir360d/90DaysOfDevOps/blob/07e12aa91d6c447ffebb712d43d26d96ebd6157f/2026/day-17/screenshots/T2.JPG)
 ---
 
-# Task 3 – Command-Line Arguments
+## Task 3: Command-Line Arguments
 
-## 3.1 greet.sh
+### 3.1: greet.sh
 
 * Accept a name as `$1`
 * Print greeting
@@ -136,11 +134,11 @@ Usage: ./greet.sh <name>
 Hello, Sabir!
 ```
 
-[Insert Screenshot: greet.sh with and without argument]
+![greet.sh with and without argument](https://github.com/sabir360d/90DaysOfDevOps/blob/07e12aa91d6c447ffebb712d43d26d96ebd6157f/2026/day-17/screenshots/T3.1.JPG)
 
 ---
 
-## 3.2 args_demo.sh
+### 3.2: args_demo.sh
 
 ### Requirement
 - Print total number of arguments (`$#`)
@@ -163,13 +161,12 @@ echo "All Arguments: $@"
 ./args_demo.sh one two three
 ```
 
-[Insert Screenshot: args_demo.sh execution]
-
+![greet.sh with and without argument](https://github.com/sabir360d/90DaysOfDevOps/blob/07e12aa91d6c447ffebb712d43d26d96ebd6157f/2026/day-17/screenshots/T3.2.JPG)
 ---
 
-# Task 4 – Install Packages via Script
+## Task 4: Install Packages via Script
 
-## install_packages.sh
+### install_packages.sh
 
 ### Requirement
 - Define packages: nginx, curl, wget
@@ -212,13 +209,13 @@ done
 sudo ./install_packages.sh
 ```
 
-[Insert Screenshot: Running install_packages.sh with sudo]
+![Running install_packages.sh with sudo](https://github.com/sabir360d/90DaysOfDevOps/blob/07e12aa91d6c447ffebb712d43d26d96ebd6157f/2026/day-17/screenshots/T4.JPG)
 
 ---
 
-# Task 5 – Error Handling
+## Task 5: Error Handling
 
-## safe_script.sh
+### safe_script.sh
 
 ### Requirement
 - Use `set -e`
@@ -255,11 +252,11 @@ Directory already exists
 Script completed successfully.
 ```
 
-[Insert Screenshot: safe_script.sh execution]
+![safe_script.sh execution](https://github.com/sabir360d/90DaysOfDevOps/blob/07e12aa91d6c447ffebb712d43d26d96ebd6157f/2026/day-17/screenshots/T5.JPG)
 
 ---
 
-# What I Learned
+## What I Learned
 
 1. Loops (`for`, `while`) allow automation of repetitive tasks such as iteration, counting, and processing lists.
 2. Command-line arguments (`$1`, `$#`, `$@`, `$0`) make scripts dynamic and reusable in real-world scenarios.
