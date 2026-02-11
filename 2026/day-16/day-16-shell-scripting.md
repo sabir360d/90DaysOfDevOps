@@ -9,7 +9,7 @@ Fundamentals of Shell Scripting.
 * Write basic if-else conditions
 
 ## Environment 
-Scripts written and executed  on Ubuntu Linux using Bash.
+Scripts written and executed in Ubuntu Linux using Bash.
 
 ---
 
@@ -35,7 +35,7 @@ chmod +x hello.sh
 ```text
 Hello, DevOps!
 ```
-![task1](path to .jpeg)
+![task1](https://github.com/sabir360d/90DaysOfDevOps/blob/4126ae7ca89678a930fea99290f243c8a2fb30d2/2026/day-16/screenshots/T1.JPG)
 Terminal showing file permissions before and after `chmod +x` and successful execution of `./hello.sh`.
 
 ### What Happens If the Shebang Is Removed?
@@ -72,7 +72,7 @@ Hello, I am Sabir and I am a DevOps Engineer
 echo 'Hello, I am $NAME'
 echo "Hello, I am $NAME"
 ```
-![task2](path to .jpeg)
+![task2](https://github.com/sabir360d/90DaysOfDevOps/blob/4126ae7ca89678a930fea99290f243c8a2fb30d2/2026/day-16/screenshots/T2.JPG)
 Terminal output showing variable expansion during script execution.
 
 ### Observed Behavior
@@ -96,7 +96,7 @@ read -p "Enter your favourite tool: " TOOL
 echo "Hello $NAME, your favourite tool is $TOOL"
 ```
 
-![task3](path to .jpeg)
+![task3](https://github.com/sabir360d/90DaysOfDevOps/blob/4126ae7ca89678a930fea99290f243c8a2fb30d2/2026/day-16/screenshots/T3.JPG)
 Interactive terminal session showing prompts and user input.
 
 ---
@@ -118,7 +118,7 @@ else
   echo "The number is zero"
 fi
 ```
-![task4-1](path to .jpeg)
+![task4-1](https://github.com/sabir360d/90DaysOfDevOps/blob/4126ae7ca89678a930fea99290f243c8a2fb30d2/2026/day-16/screenshots/T4-1.JPG)
 
 Terminal outputs showing all three conditional branches.
 
@@ -137,15 +137,7 @@ else
   echo "File does not exist"
 fi
 ```
-
-### Sample Execution
-
-```text
-Enter filename: day-16-shell-scripting.md
-File exists
-```
-
-![task4-2](path to .jpeg)
+![task4-2](https://github.com/sabir360d/90DaysOfDevOps/blob/4126ae7ca89678a930fea99290f243c8a2fb30d2/2026/day-16/screenshots/T4-2.JPG)
 Terminal verifying both existing and non-existing files.
 
 ---
@@ -174,7 +166,7 @@ else
 fi
 ```
 
-![task5](path to ,jpeg)
+![task5](https://github.com/sabir360d/90DaysOfDevOps/blob/4126ae7ca89678a930fea99290f243c8a2fb30d2/2026/day-16/screenshots/T5.JPG)
 Terminal showing service status checks and conditional branching.
 
 ---
