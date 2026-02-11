@@ -36,6 +36,7 @@ chmod +x hello.sh
 Hello, DevOps!
 ```
 ![task1](https://github.com/sabir360d/90DaysOfDevOps/blob/4126ae7ca89678a930fea99290f243c8a2fb30d2/2026/day-16/screenshots/T1.JPG)
+
 Terminal showing file permissions before and after `chmod +x` and successful execution of `./hello.sh`.
 
 ### What Happens If the Shebang Is Removed?
@@ -73,6 +74,7 @@ echo 'Hello, I am $NAME'
 echo "Hello, I am $NAME"
 ```
 ![task2](https://github.com/sabir360d/90DaysOfDevOps/blob/4126ae7ca89678a930fea99290f243c8a2fb30d2/2026/day-16/screenshots/T2.JPG)
+
 Terminal output showing variable expansion during script execution.
 
 ### Observed Behavior
@@ -97,6 +99,7 @@ echo "Hello $NAME, your favourite tool is $TOOL"
 ```
 
 ![task3](https://github.com/sabir360d/90DaysOfDevOps/blob/4126ae7ca89678a930fea99290f243c8a2fb30d2/2026/day-16/screenshots/T3.JPG)
+
 Interactive terminal session showing prompts and user input.
 
 ---
@@ -120,6 +123,7 @@ fi
 ```
 ![task4-1](https://github.com/sabir360d/90DaysOfDevOps/blob/4126ae7ca89678a930fea99290f243c8a2fb30d2/2026/day-16/screenshots/T4-1.JPG)
 
+
 Terminal outputs showing all three conditional branches.
 
 ---
@@ -138,6 +142,7 @@ else
 fi
 ```
 ![task4-2](https://github.com/sabir360d/90DaysOfDevOps/blob/4126ae7ca89678a930fea99290f243c8a2fb30d2/2026/day-16/screenshots/T4-2.JPG)
+
 Terminal verifying both existing and non-existing files.
 
 ---
@@ -167,6 +172,7 @@ fi
 ```
 
 ![task5](https://github.com/sabir360d/90DaysOfDevOps/blob/4126ae7ca89678a930fea99290f243c8a2fb30d2/2026/day-16/screenshots/T5.JPG)
+
 Terminal showing service status checks and conditional branching.
 
 ---
