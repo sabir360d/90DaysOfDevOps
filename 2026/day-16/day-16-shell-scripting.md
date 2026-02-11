@@ -186,26 +186,3 @@ Terminal showing service status checks and conditional branching.
 3. Combining user input with conditional logic enables real-world automation.
 
 ---
-
-## Reflection
-
-This day marked the transition from executing isolated commands to building reusable automation. Even simple scripts demonstrate how DevOps engineers reduce manual effort, enforce consistency, and improve operational reliability.
-
-Shell scripting is foundational for:
-
-* Automation
-* Troubleshooting
-* System health checks
-* CI/CD pipelines
-
----
-
-## Learn in Public
-
-Shared my first Bash scripts and learnings on LinkedIn to document progress and reinforce concepts through teaching and discussion.
-
----
-
-```
-```
-
