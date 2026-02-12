@@ -16,8 +16,9 @@ Cleaner, reusable scripts - learn functions, strict mode, and real-world pattern
    - A function `add` that takes two numbers and prints their sum
    - Call both functions from the script
 
-[script]
-![T1](path/to/.jpeg)
+[View Script](2026/day-18/scripts/functions.sh)
+
+![T1](screenshots/T1.JPG)
 
 ---
 
@@ -27,8 +28,9 @@ Cleaner, reusable scripts - learn functions, strict mode, and real-world pattern
    - A function `check_memory` that checks free memory using `free -h`
    - A main section that calls both and prints the results
 
-[script]
-![T2](path/to/.jpeg)
+[View Script](2026/day-18/scripts/disk_check.sh)
+
+![T2](screenshots/t2.JPG)
 
 ---
 
@@ -43,8 +45,8 @@ Cleaner, reusable scripts - learn functions, strict mode, and real-world pattern
 - `set -u` →
 - `set -o pipefail` →
 
-[script]
-![T3](path/to/.jpeg)
+[View Script](2026/day-18/scripts/strict_demo.sh)
+![T3](screenshots/T3.JPG)
 
 ---
 
@@ -54,8 +56,9 @@ Cleaner, reusable scripts - learn functions, strict mode, and real-world pattern
    - Show that `local` variables don't leak outside the function
    - Compare with a function that uses regular variables
 
-[script]
-![T4](path/to/.jpeg)
+[View Script](2026/day-18/scripts/local_demo.sh)
+
+![T4](screenshots/T4.JPG)
 
 ---
 
@@ -71,8 +74,9 @@ Create `system_info.sh` that uses functions for everything:
 
 Output should look clean and readable.
 
-[script]
-![T5](path/to/.jpeg)
+[View Script](2026/day-18/scripts/system_info.sh)
+
+![T5](screenshots/T5.JPG)
 
 ---
 
