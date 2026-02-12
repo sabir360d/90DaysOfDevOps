@@ -40,10 +40,12 @@ Cleaner, reusable scripts - learn functions, strict mode, and real-world pattern
 3. Try a command that **fails** — what happens with `set -e`?
 4. Try a **piped command** where one part fails — what happens with `set -o pipefail`?
 
-**Document:** What does each flag do?
-- `set -e` →
-- `set -u` →
-- `set -o pipefail` →
+**Explanation:** What does each flag do?
+- `set -e` → Exit immediately if a command fails
+- `set -u` → Exit if using an undefined variable
+- `set -o pipefail` → Pipeline fails if any command fails
+
+**Strict mode prevents silent script failures and improves production safety.**
 
 [View Script](2026/day-18/scripts/strict_demo.sh)
 
@@ -61,6 +63,12 @@ Cleaner, reusable scripts - learn functions, strict mode, and real-world pattern
 
 ![T4](screenshots/T4.JPG)
 
+### Output shows:
+- local_var does not exist outside the function
+- Local variables do not leak outside the function scope
+- global_var is modified globally
+
+
 ---
 
 ### Task 5: Build a Script — System Info Reporter
@@ -72,7 +80,6 @@ Create `system_info.sh` that uses functions for everything:
 5. A function to print **top 5 CPU-consuming processes**
 6. A `main` function that calls all of the above with section headers
 7. Use `set -euo pipefail` at the top
-
 Output should look clean and readable.
 
 [View Script](2026/day-18/scripts/system_info.sh)
@@ -81,4 +88,9 @@ Output should look clean and readable.
 
 ---
 
+### Key Learnings
+1. Functions make scripts modular and reusable.
+2. `set -euo pipefail` prevents dangerous silent failures.
+3. Strict mode prevents silent script failures and improves production safety.
+4. Local variables improve script safety and maintainability.
 
