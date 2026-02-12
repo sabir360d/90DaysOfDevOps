@@ -46,6 +46,7 @@ Cleaner, reusable scripts - learn functions, strict mode, and real-world pattern
 - `set -o pipefail` →
 
 [View Script](2026/day-18/scripts/strict_demo.sh)
+
 ![T3](screenshots/T3.JPG)
 
 ---
