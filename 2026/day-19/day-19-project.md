@@ -20,7 +20,7 @@ Create `log_rotate.sh` that:
 
 ### Solution
 
-- Lets create .log files in `/var/log/myapp`
+- Create five .log files in /var/log/myapp
 - Three `.log` files older than 7 days
 - Two `.log` files older than 30 days
 
@@ -76,22 +76,25 @@ Script should:
 
 ```bash
 crontab -l
-
 ```
 
-### Cron Entries Written
+### Edit cron jobs
+```bash
+crontab -e
+```
+### Required Cron Entries
 
-Run log rotation daily at 2 AM
+```bash
 
-0 2 * * * /path/to/log_rotate.sh /var/log/myapp
+# Run log rotation every day at 2 AM
+0 2 * * * /usr/bin/bash /root/90DaysOfDevOps/2026/day-19/log_rotate.sh /var/log/myapp >> /var/log/log_rotate.log 2>&1
 
-Run backup every Sunday at 3 AM
+# Run backup every Sunday at 3 AM
+0 3 * * 0 /usr/bin/bash /root/90DaysOfDevOps/2026/day-19/backup.sh /var/www /backups >> /var/log/backup.log 2>&1
 
-0 3 * * 0 /path/to/backup.sh /var/www /backups
-
-Run health check every 5 minutes
-
-*/5 * * * * /path/to/health_check.sh
+# Run health check every 5 minutes
+*/5 * * * * /usr/bin/bash /root/90DaysOfDevOps/2026/day-19/health_check.sh >> /var/log/health.log 2>&1
+```
 
 ---
 
@@ -111,12 +114,11 @@ Run health check every 5 minutes
 ### Cron Entry – Run Daily at 1 AM
 
 ```bash
-0 1 * * * /home/ubuntu/day-19/scripts/maintenance.sh
+0 1 * * * /root/90DaysOfDevOps/2026/day-19/maintenance.sh
 ```
 
 ### What I Learned
 
-1. Automation reduces operational risk and human error.
-2. Cron scheduling is powerful but requires precision and testing.
-3. Logging with timestamps is critical for observability and troubleshooting.
-4. Defensive scripting (argument checks, exit codes) separates hobby scripts from production-ready automation.
+1. Automation reduces operational risk — Manual backups and log cleanup are failure-prone.
+2. Cron is powerful but dangerous — A wrong path or missing permission breaks automation silently.
+3. Observability matters — Logging output with timestamps is critical for production troubleshooting.
