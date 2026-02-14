@@ -94,7 +94,7 @@ crontab -e
 */5 * * * * /usr/bin/bash /root/90DaysOfDevOps/2026/day-19/health_check.sh >> /var/log/health.log 2>&1
 ```
 
-### Screenshot Output
+### Screenshot Enteries
 ![Crontab entries](./screenshots/T3.JPG)
 
 ---
@@ -109,7 +109,7 @@ crontab -e
 ### Script Location
 [scripts/maintenance.sh](./scripts/maintenance.sh)
 
-### Screenshot Entries
+### Screenshot Output
 ![Maintenance script output](./screenshots/T4.JPG)
 
 ### Cron Entry – Run Daily at 1 AM
