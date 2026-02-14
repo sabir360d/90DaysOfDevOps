@@ -28,8 +28,8 @@ Create `log_rotate.sh` that:
 [scripts/log_rotate.sh](./scripts/log_rotate.sh)
 
 ### Screenshot Output
-[screenshots/1log-rotate-output.jpeg](2026/day-19/screenshots/T1.JPG)
-[screenshots/2log-rotate-output.jpeg](2026/day-19/screenshots/T1a.JPG)
+![screenshots/1log-rotate-output.jpeg](2026/day-19/screenshots/T1.JPG)
+![screenshots/2log-rotate-output.jpeg](2026/day-19/screenshots/T1a.JPG)
 
 ---
 
