@@ -28,8 +28,9 @@ Create `log_rotate.sh` that:
 [scripts/log_rotate.sh](./scripts/log_rotate.sh)
 
 ### Screenshot Output
-![screenshots/1log-rotate-output.jpeg](2026/day-19/screenshots/T1.JPG)
-![screenshots/2log-rotate-output.jpeg](2026/day-19/screenshots/T1a.JPG)
+
+![Log rotation output 1](./screenshots/T1.JPG)
+![Log rotation output 2](./screenshots/T1a.JPG)
 
 ---
 
@@ -46,7 +47,7 @@ Create `log_rotate.sh` that:
 [scripts/backup.sh](./scripts/backup.sh)
 
 ### Screenshot Output
-[screenshots/backup-output.jpeg](2026/day-19/screenshots/T2.JPG)
+![Backup script output](./screenshots/T2.JPG)
 
 ---
 
@@ -94,7 +95,7 @@ crontab -e
 ```
 
 ### Screenshot Output
-[screenshots/crontab-entries.jpeg](./screenshots/crontab-entries.jpeg)
+![Crontab entries](./screenshots/T3.JPG)
 
 ---
 
@@ -109,7 +110,7 @@ crontab -e
 [scripts/maintenance.sh](./scripts/maintenance.sh)
 
 ### Screenshot Output
-[screenshots/maintenance-output.jpeg](./screenshots/maintenance-output.jpeg)
+![Maintenance script output](./screenshots/T4.JPG)
 
 ### Cron Entry – Run Daily at 1 AM
 
