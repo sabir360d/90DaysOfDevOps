@@ -109,7 +109,7 @@ crontab -e
 ### Script Location
 [scripts/maintenance.sh](./scripts/maintenance.sh)
 
-### Screenshot Output
+### Screenshot Entries
 ![Maintenance script output](./screenshots/T4.JPG)
 
 ### Cron Entry – Run Daily at 1 AM
