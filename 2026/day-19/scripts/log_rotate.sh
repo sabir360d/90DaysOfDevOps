@@ -13,58 +13,40 @@ Description:
 - Exits with error if directory does not exist
 readme
 
-function display_usage {
-    echo "Usage: ./log_rotate.sh <log_directory>"
-}
+LOG_DIR=$1
 
-# Check if argument is provided
-if [ $# -ne 1 ]; then
-    display_usage
+# 1. Check if directory exists
+if [ ! -d "$LOG_DIR" ]; then
+    echo "Error: Directory $LOG_DIR does not exist."
     exit 1
 fi
 
-log_dir=$1
+echo "Starting log rotation in: $LOG_DIR"
+echo "--------------------------------------"
 
-# Check if directory exists
-if [ ! -d "$log_dir" ]; then
-    echo "Error: Directory '$log_dir' does not exist."
-    exit 1
-fi
+# 2. Compress .log files older than 7 days
+# We find files, compress them, and store the names in a variable for the count
+comp_list=$(find "$LOG_DIR" -name "*.log" -type f -mtime +7)
+comp_count=0
 
-compressed_count=0
-deleted_count=0
+for file in $comp_list; do
+    gzip "$file"
+    echo "Compressed: ${file}.gz"
+    ((comp_count++))
+done
 
-function compress_logs {
+# 3. Delete .gz files older than 30 days
+del_list=$(find "$LOG_DIR" -name "*.gz" -type f -mtime +30)
+del_count=0
 
-    # Find .log files older than 7 days (not already compressed)
-    old_logs=$(find "$log_dir" -type f -name "*.log" -mtime +7)
+for file in $del_list; do
+    rm "$file"
+    echo "Deleted: $file"
+    ((del_count++))
+done
 
-    for file in $old_logs; do
-        gzip "$file"
-        if [ $? -eq 0 ]; then
-            ((compressed_count++))
-        fi
-    done
-}
-
-function delete_old_archives {
-
-    # Find .gz files older than 30 days
-    old_archives=$(find "$log_dir" -type f -name "*.gz" -mtime +30)
-
-    for file in $old_archives; do
-        rm -f "$file"
-        if [ $? -eq 0 ]; then
-            ((deleted_count++))
-        fi
-    done
-}
-
-compress_logs
-delete_old_archives
-
-echo "Compressed files: $compressed_count"
-echo "Deleted files: $deleted_count"
-
-exit 0
+# 4. Print Summary
+echo "--------------------------------------"
+echo "Compressed files: $comp_count"
+echo "deleted files: $del_count"
 
