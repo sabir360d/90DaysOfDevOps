@@ -24,17 +24,12 @@ Create `log_rotate.sh` that:
 - Three `.log` files older than 7 days
 - Two `.log` files older than 30 days
 
-Script should:
-- Compress all .log files older than 7 days
-- Delete only .gz files older than 30 days
-- Print how many were compressed and deleted
-- Exit if directory doesn’t exist
-
 ### Script Location
 [scripts/log_rotate.sh](./scripts/log_rotate.sh)
 
 ### Screenshot Output
-[screenshots/log-rotate-output.jpeg](./screenshots/log-rotate-output.jpeg)
+[screenshots/1log-rotate-output.jpeg](2026/day-19/screenshots/T1.JPG)
+[screenshots/2log-rotate-output.jpeg](2026/day-19/screenshots/T1a.JPG)
 
 ---
 
@@ -51,7 +46,7 @@ Script should:
 [scripts/backup.sh](./scripts/backup.sh)
 
 ### Screenshot Output
-[screenshots/backup-output.jpeg](./screenshots/backup-output.jpeg)
+[screenshots/backup-output.jpeg](2026/day-19/screenshots/T2.JPG)
 
 ---
 
