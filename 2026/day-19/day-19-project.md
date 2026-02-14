@@ -58,6 +58,7 @@ Script should:
 ### Task 3: Crontab
 1. Read: `crontab -l` — what's currently scheduled?
 2. Understand cron syntax:
+
    ```
    * * * * *  command
    │ │ │ │ │
@@ -67,6 +68,7 @@ Script should:
    │ └──────── Hour (0-23)
    └────────── Minute (0-59)
    ```
+
 3. Write cron entries (in your markdown, don't apply if unsure) for:
    - Run `log_rotate.sh` every day at 2 AM
    - Run `backup.sh` every Sunday at 3 AM
@@ -82,10 +84,10 @@ crontab -l
 ```bash
 crontab -e
 ```
-### Required Cron Entries
+
+### Cron Entries
 
 ```bash
-
 # Run log rotation every day at 2 AM
 0 2 * * * /usr/bin/bash /root/90DaysOfDevOps/2026/day-19/log_rotate.sh /var/log/myapp >> /var/log/log_rotate.log 2>&1
 
@@ -95,6 +97,9 @@ crontab -e
 # Run health check every 5 minutes
 */5 * * * * /usr/bin/bash /root/90DaysOfDevOps/2026/day-19/health_check.sh >> /var/log/health.log 2>&1
 ```
+
+### Screenshot Output
+[screenshots/crontab-entries.jpeg](./screenshots/crontab-entries.jpeg)
 
 ---
 
