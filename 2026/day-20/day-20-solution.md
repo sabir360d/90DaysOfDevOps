@@ -13,10 +13,9 @@ This project simulates real-world log monitoring tasks performed by system admin
 
 # Project Files
 
-- Log Analyzer Script:  
+- Log Analyzer Script: [log_analyzer.sh](script20/log_analyzer.sh) 
   
-
-- A generated summary report:
+- A generated summary report: [log_report_2026-02-16.txt](script20/log_report_2026-02-16.txt)
 
 
 # Sample Log File Generation
@@ -37,7 +36,7 @@ Logs were generated using:
 - Exit if file does not exist
 
 ### Screenshot
-![Task 1](screenshots/task-1-input-validation.png)
+![Task 1](screenshots20/T1.JPG)
 
 ---
 
@@ -48,7 +47,7 @@ Logs were generated using:
 - Print total count to console
 
 ### Screenshot
-![Task 2](screenshots/task-2-error-count.png)
+![Task 2](screenshots20/T2.JPG)
 
 ---
 
@@ -59,7 +58,7 @@ Logs were generated using:
 - Print full log line with line number
 
 ### Screenshot
-![Task 3](screenshots/task-3-critical-events.png)
+![Task 3](screenshots20/T3.JPG)
 
 ---
 
@@ -72,7 +71,7 @@ Logs were generated using:
 - Display top 5
 
 ### Screenshot
-![Task 4](screenshots/task-4-top-errors.png)
+![Task 4](screenshots20/T4.JPG)
 
 ---
 
@@ -93,7 +92,7 @@ Report includes:
 - Critical events
 
 ### Screenshot
-![Task 5](screenshots/task-5-report-generation.png)
+![Task 5](screenshots20/T5.JPG)
 
 ---
 
@@ -104,13 +103,11 @@ After analysis:
 - Moves processed log file into archive
 
 ### Screenshot
-![Task 6](screenshots/task-6-archive.png)
+![Task 6](screenshots20/T6.JPG)
 
 ---
 
 # Commands & Tools Used
-
-# 🛠 Commands & Tools Used
 
 | Tool | Purpose |
 |------|---------|
@@ -166,10 +163,10 @@ Automating log analysis and report generation reduces manual effort and ensures 
 
 ---
 
-# Higlights 
+# Highlights 
 
-Log analysis is foundational for observability, incident response, and operational excellence.  
+- Log analysis is foundational for observability, incident response, and operational excellence.  
 
-This exercise reinforced how Bash scripting can be used to build lightweight yet powerful automation solutions in real-world production environments.
+- This exercise reinforced how Bash scripting can be used to build lightweight yet powerful automation solutions in real-world production environments.
 
 ---
