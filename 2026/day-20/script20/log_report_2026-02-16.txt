@@ -1,0 +1,40 @@
+=========================================
+        LOG ANALYSIS REPORT
+=========================================
+Date of Analysis: 2026-02-16
+Log File: test.log
+Total Lines Processed: 100
+Total ERROR / Failed Count: 18
+
+----- Top 5 Error Messages -----
+      4    Out of memory
+      4    Invalid input
+      4    Failed to connect
+      4    Disk full
+      2    Segmentation fault
+
+----- Critical Events -----
+1:2026-02-16 09:03:52 [CRITICAL] Disk space below threshold
+2:2026-02-16 09:03:52 [CRITICAL] Database connection lost
+5:2026-02-16 09:03:52 [CRITICAL] Kernel panic detected
+7:2026-02-16 09:03:52 [CRITICAL] Kernel panic detected
+9:2026-02-16 09:03:52 [CRITICAL] Disk space below threshold
+11:2026-02-16 09:03:52 [CRITICAL] Database connection lost
+15:2026-02-16 09:03:52 [CRITICAL] Disk space below threshold
+18:2026-02-16 09:03:52 [CRITICAL] Service unavailable
+31:2026-02-16 09:03:52 [CRITICAL] Database connection lost
+39:2026-02-16 09:03:52 [CRITICAL] Database connection lost
+41:2026-02-16 09:03:52 [CRITICAL] Disk space below threshold
+42:2026-02-16 09:03:52 [CRITICAL] Database connection lost
+50:2026-02-16 09:03:52 [CRITICAL] Service unavailable
+54:2026-02-16 09:03:52 [CRITICAL] Database connection lost
+57:2026-02-16 09:03:52 [CRITICAL] Kernel panic detected
+59:2026-02-16 09:03:52 [CRITICAL] Service unavailable
+60:2026-02-16 09:03:52 [CRITICAL] Kernel panic detected
+63:2026-02-16 09:03:52 [CRITICAL] Service unavailable
+72:2026-02-16 09:03:52 [CRITICAL] Disk space below threshold
+76:2026-02-16 09:03:52 [CRITICAL] Database connection lost
+77:2026-02-16 09:03:52 [CRITICAL] Disk space below threshold
+82:2026-02-16 09:03:52 [CRITICAL] Database connection lost
+86:2026-02-16 09:03:52 [CRITICAL] Kernel panic detected
+97:2026-02-16 09:03:52 [CRITICAL] Service unavailable
