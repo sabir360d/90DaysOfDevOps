@@ -1,6 +1,6 @@
 # Shell Scripting Cheat Sheet for my reference
 
-# Quick Reference Table
+## Quick Reference Table
 
 | Topic | Key Syntax | Example |
 |-------|------------|---------|
