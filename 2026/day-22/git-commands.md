@@ -1,5 +1,5 @@
 # Git Commands Reference
-# Setup & Configuration
+## Setup & Configuration
 
 ## Configure Git
 
