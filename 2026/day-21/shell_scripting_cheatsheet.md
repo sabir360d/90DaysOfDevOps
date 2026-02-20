@@ -15,7 +15,7 @@
 
 ---
 
-## Shell Scripting Cheat Sheet
+## Task 1: Shell Scripting Cheat Sheet
 
 ### 1. Shebang (`#!bash #!/bin/bash`)
 - The Shebang is the first line of your script. It tells the operating system which interpreter to use to execute the code. Without it, the system may not know whether to use Bash, Python, or Sh. 
@@ -66,7 +66,7 @@ echo "Hello $NAME"
 ```
 ---
 
-# Task 2: Operators & Conditionals
+## Task 2: Operators & Conditionals
 
 ### 1. String Comparisons: `=`, `!=`, `-z`, `-n`
 *Note: Always use double quotes around variables (e.g., `"$var"`) to handle spaces.*
@@ -138,7 +138,7 @@ esac
 ```
 ---
 
-# Task3: Loops
+## Task3: Loops
 
 ##  For Loop (List)
 Best for iterating over strings, arrays, or specific values.
@@ -223,7 +223,7 @@ done < input.txt
 ```
 ---
 
-# ask 4: Functions
+## Task 4: Functions
 
 You can define a function using two syntaxes. The most common is the standard parentheses style. To call it, simply type the function name (no parentheses needed when calling).
 
@@ -263,7 +263,7 @@ my_func() {
 
 ---
 
-# 5. Text Processing Commands
+## Task 5: Text Processing Commands
 
 ## 1. Pattern Searching: grep
 Used to find lines that match a specific pattern.
@@ -329,7 +329,7 @@ cut -d',' -f1 data.csv | sort | uniq -c  # Count unique values in first column
 
 ---
 
-# 6.  Useful One-Liners
+## Task 6:  Useful One-Liners
 
 ## Delete Files Older Than 7 Days
 ```bash
@@ -363,7 +363,7 @@ tail -f app.log | grep --line-buffered "ERROR"
 
 ---
 
-# 7. Error Handling & Debugging
+## Task 7: Error Handling & Debugging
 
 ## Exit Codes
 ```bash
@@ -404,7 +404,7 @@ Essential for temp files and rollback logic.
 
 ---
 
-# Pro Tip
+## Pro Tip
 
 Shell scripting is not about memorizing syntax.  
 It’s about:
