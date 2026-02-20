@@ -422,6 +422,3 @@ set -euo pipefail
 This makes production scripts safer and more predictable.
 
 ---
-
-**End of Cheat Sheet**
-
