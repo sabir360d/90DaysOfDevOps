@@ -31,6 +31,8 @@ git config --list
 ## Create Your Git Project
 ## Repository Initialization
 
+![Task 2](screenshots/T2.JPG)
+
 ## git init
 Initializes a new Git repository in the current directory.
 ```bash
@@ -43,6 +45,8 @@ Creates a hidden `.git/` folder that stores repository metadata.
 
 ## Create Git Commands Reference
 
+![Task 3](screenshots/T3.JPG)
+
 ## git status
 Shows the state of working directory and staging area.
 ```bash
@@ -54,6 +58,8 @@ Stages a file for the next commit.
 ```bash
 git add git-commands.md
 ```
+
+![Task 4](screenshots/T4.JPG)
 
 ## git add .
 Stages all modified files.
@@ -81,6 +87,8 @@ Shows staged changes before commit.
 ```bash
 git diff --staged
 ```
+
+![Task 5](screenshots/T5.JPG)
 
 ## git log
 Shows commit history.
