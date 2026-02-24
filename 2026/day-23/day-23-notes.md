@@ -181,7 +181,7 @@ Create a new repository on GitHub without initializing it with a README.
 
 ### Connect local repository to GitHub
 
-![Task 3](screenshots/T3-cli.jpg)
+![Task 3](screenshots/T3-cli.JPG)
 
 ```bash
 git remote add origin https://github.com/sabir360d/devops-git-practice.git
@@ -210,12 +210,12 @@ git push -u origin feature-1
 ```
 After pushing, both branches should be visible in the GitHub branch selector.
 
-![Task 3](screenshots/T3a.jpg)
+![Task 3](screenshots/T3a.JPG)
 ---
 
 ### What is the difference between origin and upstream?
 
-![Task 3](screenshots/T3d-origin and upstream.jpg)
+![Task 3](screenshots/T3d-origin%20and%20upstream.JPG)
 
 **origin**
 - Default name for the remote repository you push to  
@@ -237,7 +237,8 @@ In fork workflows:
 
 Edit a file using the GitHub web editor and commit the change.
 
-![Task 4](screenshots/T4-changed in GitHub.jpg)
+![Task 4](screenshots/T4-changed%20in%20GitHub.JPG)
+
 ---
 
 ### Pull the change locally
@@ -246,7 +247,7 @@ Edit a file using the GitHub web editor and commit the change.
 git pull origin main
 ```
 
-![Task 4](screenshots/T4-pulled to local repo.jpg)
+![Task 4](screenshots/T4-pulled%20to%20local%20repo.JPG)
 
 ---
 
@@ -276,7 +277,7 @@ git clone https://github.com/some-user/some-repo.git
 
 This creates a local copy of the repository.
 
-![Task 5](screenshots/T5.jpg)
+![Task 5](screenshots/T5.JPG)
 
 ---
 
@@ -284,7 +285,7 @@ This creates a local copy of the repository.
 
 Fork the repository on GitHub using the **Fork** button.
 
-![Task 5](screenshots/T5a.jpg)
+![Task 5](screenshots/T5a.JPG)
 
 ---
 
@@ -344,10 +345,7 @@ git rebase upstream/main
 
 ---
 
-# Summary
-
-Today I learned:
-
+### What I learned:
 - How Git branches isolate development  
 - How HEAD works  
 - The difference between switch and checkout  
