@@ -140,3 +140,15 @@ Working Directory → Staging Area → Repository
 
 ---
 
+### Add branching commands (updated 2/24/2026)
+
+- `git branch`
+- `git branch -a`
+- `git switch`
+- `git switch -c`
+- `git checkout`
+- `git checkout -b`
+- `git branch -d`
+- `git branch -D`
+
+
