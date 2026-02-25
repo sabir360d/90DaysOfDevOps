@@ -138,8 +138,6 @@ It rewrites commit history.
 
 ---
 
-## Answers
-
 ### What does rebase actually do?
 
 Rewrites commit base and reapplies commits on top of another branch.
@@ -205,8 +203,6 @@ All individual commits preserved + merge commit.
 
 ---
 
-## Answers
-
 ### What does squash merging do?
 Combines multiple commits into a single commit before merging.
 
@@ -215,16 +211,11 @@ Combines multiple commits into a single commit before merging.
 - Before merging pull requests
 - Keep main branch clean
 
-### Trade-off?
-You lose granular commit history.
-
 ---
 
 # Task 4: Git Stash — Hands-On
 
-## Scenario
-
-Made changes without committing.
+## Made changes without committing.
 
 Attempted:
 ```bash
@@ -249,7 +240,7 @@ Return later:
 git stash pop
 ```
 
-![Task 4](screnshots/T4.JPG)
+![Task 4](screenshots/T4.JPG)
 
 ---
 
@@ -273,8 +264,6 @@ git stash apply stash@{1}
 ```
 
 ---
-
-## Answers
 
 ### Difference between `pop` and `apply`?
 
@@ -302,16 +291,16 @@ git checkout main
 git cherry-pick <hash-of-second-commit>
 ```
 
-![Task 5](screnshots/T5.JPG)
+![Task 5](screenshots/T5.JPG)
 
 
-![Task 5a](screnshots/T5a.JPG)
+![Task 5a](screenshots/T5a.JPG)
 
 
-![Task 5b](screnshots/T5b.JPG)
+![Task 5b](screenshots/T5b.JPG)
 
 
-![Task 5c](screnshots/T5c.JPG)
+![Task 5c](screenshots/T5c.JPG)
 
 ---
 
@@ -323,10 +312,9 @@ Verified with:
 ```bash
 git log --oneline
 ```
-![Task 5d](screnshots/T5d.JPG)
----
+![Task 5d](screenshots/T5d.JPG)
 
-## Answers
+---
 
 ### What does cherry-pick do?
 
@@ -361,10 +349,6 @@ Applies a specific commit from another branch onto current branch.
 
 Advanced Git is not about commands.
 It’s about controlling change with precision.
-
-Strong engineers don’t just create branches.
-
-They manage integration strategy intentionally.
 
 ---
 
