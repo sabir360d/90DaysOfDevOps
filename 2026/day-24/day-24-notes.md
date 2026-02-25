@@ -302,6 +302,17 @@ git checkout main
 git cherry-pick <hash-of-second-commit>
 ```
 
+![Task 5](screnshots/T5.JPG)
+
+
+![Task 5a](screnshots/T5a.JPG)
+
+
+![Task 5b](screnshots/T5b.JPG)
+
+
+![Task 5c](screnshots/T5c.JPG)
+
 ---
 
 ## Observation
@@ -312,7 +323,7 @@ Verified with:
 ```bash
 git log --oneline
 ```
-
+![Task 5d](screnshots/T5d.JPG)
 ---
 
 ## Answers
@@ -342,11 +353,11 @@ Applies a specific commit from another branch onto current branch.
 
 # Summary
 
-Merge preserves history.
-Rebase rewrites history.
-Squash cleans history.
-Stash protects unfinished work.
-Cherry-pick isolates surgical changes.
+- Merge preserves history.
+- Rebase rewrites history.
+- Squash cleans history.
+- Stash protects unfinished work.
+- Cherry-pick isolates surgical changes.
 
 Advanced Git is not about commands.
 It’s about controlling change with precision.
