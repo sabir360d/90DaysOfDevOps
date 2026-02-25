@@ -2,25 +2,30 @@
 
 ## Task 1: Git Reset — Hands-On
 
-![Task 1](screenshots T1.JPG)
+![Task 1](screenshots/T1.JPG)
 
-
-#### `git reset --soft HEAD~1`
+```bash
+ git reset --soft HEAD~1
+```
 - Moves HEAD back to previous commit
 - Changes from removed commit stay **staged**
 - Nothing lost
 
-#### `git reset --mixed HEAD~1` (default)
+```bash
+git reset --mixed HEAD~1 # (default)
+```
 - Moves HEAD back
 - Changes become **unstaged**
 - Files remain modified in working directory
 
-#### `git reset --hard HEAD~1`
+```bash
+git reset --hard HEAD~1
+```
 - Moves HEAD back
 - Removes commit
 - Deletes changes from working directory
 
-![Task 1](screenshots T1a.JPG)
+![Task 1](screenshots/T1a.JPG)
 
 
 **Difference**
@@ -43,24 +48,21 @@
 
 ## Task 2: Git Revert — Hands-On
 
-![Task 2](screenshots T2.JPG)
+![Task 2](screenshots/T2.JPG)
 
-
-Command:
 ```bash
 git revert <commit-Y>
 ```
 
-![Task 2](screenshots T2a.JPG)
+![Task 2](screenshots/T2a.JPG)
 
 
-![Task 2](screenshots T2b.JPG)
+![Task 2](screenshots/T2b.JPG)
 
 
 - New commit created: “Revert Y”
 - Commit Y still exists in history
 - Changes from Y are undone safely
-
 
 **Reset vs Revert**
 
