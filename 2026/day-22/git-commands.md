@@ -151,4 +151,19 @@ Working Directory → Staging Area → Repository
 - `git branch -d`
 - `git branch -D`
 
+### Add branching commands (updated 2/25/2026)
+
+```bash
+git merge
+git merge --squash
+git rebase
+git log --oneline --graph --all
+git stash
+git stash list
+git stash apply
+git stash pop
+git stash push -m "message"
+git cherry-pick <commit-hash>
+```
+
 
