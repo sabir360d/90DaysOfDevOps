@@ -6,13 +6,16 @@
 name: Mark stale issues and pull requests
 
 on:
+  workflow_dispatch:
   schedule:
   - cron: '20 7 * * *'
+  workflow_dispatch:
 
 jobs:
   stale:
 
     runs-on: ubuntu-latest
+  workflow_dispatch:
     permissions:
       issues: write
       pull-requests: write
