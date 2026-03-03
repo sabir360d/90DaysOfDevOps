@@ -234,7 +234,7 @@ http://<ec2 publib ip>:8080 # allow port 8080 in security group
 
 ## View Logs
 
-![T4.2.3](screenshots/T4.2.3JPG)
+![T4.2.3](screenshots/T4.2.3.JPG)
 
 ```bash
 docker logs nginx-live
