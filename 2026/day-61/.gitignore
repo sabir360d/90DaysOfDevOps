@@ -1,0 +1,4 @@
+2026/day-61/awscliv2.zip
+.terraform/
+*.tfstate*
+.terraform.lock.hcl
