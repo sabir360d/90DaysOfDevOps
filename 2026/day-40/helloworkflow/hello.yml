@@ -1,0 +1,27 @@
+name: My First GitHub Actions Workflow # Name of the workflow
+
+on: # Trigger the workflow on push events to the repository
+  push: # Trigger the workflow on push events to the repository
+
+jobs: # Defines jobs to be run in the workflow
+  greet: # Name of the job
+    runs-on: ubuntu-latest # Specify the operating system for the job
+
+    steps: # Define the steps to be executed in the job
+      - name: Checkout Repository # Step to check out the repository
+        uses: actions/checkout@v4 # Use the checkout action to check out the repository
+
+      - name: Say Hello # Step to print a greeting message
+        run: echo "Hello from GitHub Actions!" # Command to print a greeting message to the console 
+
+      - name: Show Date & Time # Step to display the current date and time
+        run: date # Command to display the current date and time
+
+      - name: Show Branch Name # Step to display the name of the current branch
+        run: echo "Branch:${{ github.ref_name }}" # Command to display the name of the current branch using GitHub context
+
+      - name: List Files # Step to list files in the current directory
+        run: ls -la # Command to list files in the current directory with detailed information
+
+      - name: Show OS # Step to display the operating system of the runner
+        run: echo "Runner OS:${{ runner.os }}" # Command to display the operating system of the runner using GitHub context

@@ -1,0 +1,33 @@
+name: Multi-OS Runner Demo
+
+on:
+  workflow_dispatch:
+
+jobs:
+  ubuntu-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print System Info (Ubuntu)
+        run: |
+          echo "OS: $(uname -a)"
+          echo "Hostname: $(hostname)"
+          echo "User: $(whoami)"
+
+  windows-job:
+    runs-on: windows-latest
+    steps:
+      - name: Print System Info (Windows)
+        shell: powershell
+        run: |
+          Write-Output "OS: $env:OS"
+          hostname
+          Write-Output "User: $env:USERNAME"
+
+  macos-job:
+    runs-on: macos-latest
+    steps:
+      - name: Print System Info (macOS)
+        run: |
+          echo "OS: $(uname -a)"
+          echo "Hostname: $(hostname)"
+          echo "User: $(whoami)"

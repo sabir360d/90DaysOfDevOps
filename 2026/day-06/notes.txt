@@ -1,0 +1,9 @@
+1 - Day 06 - Linux Fil I/O for DevOps
+2 - Practiced creating and managing text files on a Linux system
+3 - Used redirection (>) and append (>>) for controlled file writes
+4 - Applied tee to write and display output simultaneously
+5 - Validated file contents using cat
+6 - Inspected partial file data using head and tail
+7 - Focused on handling logs and configuration files safely
+8 - Reinforced file operations used daily in production environments
+9 - Used Heredoc to add multiple lines into a command safely

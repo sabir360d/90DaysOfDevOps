@@ -1,0 +1,35 @@
+name: Smart Pipeline
+
+on: # Trigger the workflow on push to any branch
+  push:
+    branches:
+      - '**' # Trigger the workflow on pull request to any branch
+
+jobs: # Define the jobs in the workflow
+  lint: # This job will run first
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lint Code
+        run: echo "Linting code..."
+
+  test: # This job will run in parallel with the lint job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Tests
+        run: echo "Running tests..."
+
+  summary: # This job will run after lint and test jobs
+    runs-on: ubuntu-latest
+    needs: [lint, test]
+    steps:
+      - name: Branch Info
+        run: |
+          if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
+            echo "This is a MAIN branch push"
+          else
+            echo "This is a FEATURE branch push"
+          fi
+
+      - name: Commit Message # Display the commit message of the first commit in the push event
+        run: |
+          echo "Commit message: ${{ github.event.commits[0].message }}"

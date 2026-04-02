@@ -1,0 +1,27 @@
+name: Environment Variables Demo
+
+on:
+  workflow_dispatch:
+
+env: # workflow-level environment variables
+  APP_NAME: myapp # Workflow-level variables are available to all jobs and steps, but can be overridden by job and step-level variables
+
+jobs: 
+  demo-env:
+    runs-on: ubuntu-latest
+    env: # Job-level environment variables
+      ENVIRONMENT: staging # Job-level variables override workflow level variables
+
+    steps: # Steps to demonstrate environment variables
+      - name: Print Environment Variables
+        env: # Step-level environment variables
+          VERSION: 1.0.0 # Step-level variables override job and workflow level variables
+        run: | # Print all environment variables
+          echo "App Name: $APP_NAME"
+          echo "Environment: $ENVIRONMENT"
+          echo "Version: $VERSION"
+
+      - name: Print GitHub Context # GitHub context variables are available in all steps and jobs, and provide information about the workflow run
+        run: | 
+          echo "Commit SHA: ${{ github.sha }}"
+          echo "Triggered by: ${{ github.actor }}"

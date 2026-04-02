@@ -1,0 +1,24 @@
+name: Conditionals Demo
+
+on: # Trigger on push and pull request events
+  push: # Trigger on push events to any branch
+  pull_request: # Trigger on pull request events to any branch
+
+jobs: # Define a job that demonstrates conditionals
+  conditional-job:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+
+    steps:
+      - name: Run only on main branch
+        if: github.ref == 'refs/heads/main' # This step will only run if the push event is on the main branch
+        run: echo "This runs only on main branch"
+
+      - name: Step that fails intentionally # This step will fail, but we will use conditionals to handle this
+        id: fail-step
+        run: exit 1 # This step will fail, but we will use conditionals to handle this
+        continue-on-error: true
+
+      - name: Run if previous step failed
+        if: failure() # This step will run if the previous step (fail-step) failed
+        run: echo "Previous step failed, so this runs"

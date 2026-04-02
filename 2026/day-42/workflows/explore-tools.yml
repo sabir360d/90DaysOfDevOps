@@ -1,0 +1,29 @@
+name: Explore Preinstalled Tools
+
+on:
+  workflow_dispatch:
+
+jobs:
+  tools-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print System Info
+        run: |
+          echo "OS: $(uname -a)"
+          echo "Hostname: $(hostname)"
+          echo "User: $(whoami)"
+
+      - name: Check Installed Tools
+        run: |
+          echo "Docker Version:"
+          docker --version || echo "Docker not available"
+
+          echo "Python Version:"
+          python3 --version
+
+          echo "Node Version:"
+          node --version
+
+          echo "Git Version:"
+          git --version

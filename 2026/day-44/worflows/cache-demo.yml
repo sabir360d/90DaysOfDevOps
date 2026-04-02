@@ -1,0 +1,26 @@
+name: Cache Demo
+
+on:
+  workflow_dispatch:
+
+jobs:
+  cache:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/demo
+          key: demo-cache-${{ runner.os }}
+
+      - name: Install dependencies (simulated)
+        run: |
+          mkdir -p ~/.cache/demo
+          echo "dependency" > ~/.cache/demo/file.txt
+
+      - name: Show cached files
+        run: cat ~/.cache/demo/file.txt
