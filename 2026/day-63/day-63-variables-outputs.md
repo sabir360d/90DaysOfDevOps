@@ -284,11 +284,11 @@ subnet_cidr   = "10.1.1.0/24"
 6. TF_VAR_* environment variables
 
 
-![T2a](screeshots/T2a.JPG)
+![T2a](screenshots/T2a.JPG)
 
-![T2b](screeshots/T2b.JPG)
+![T2b](screenshots/T2b.JPG)
 
-![T2c](screeshots/T2c.JPG)
+![T2c](screenshots/T2c.JPG)
 
 ---
 
@@ -442,12 +442,12 @@ terraform destroy -auto-approve
 * output → value shown after apply
 * data → fetch external info
 
-![T6.1](screeshots/T6.1.JPG)
+![T6.1](screenshots/T6.1.JPG)
 
-![T6.2](screeshots/T6.2.JPG)
+![T6.2](screenshots/T6.2.JPG)
 
-![T6.3](screeshots/T6.3.JPG)
+![T6.3](screenshots/T6.3.JPG)
 
-![T6.4](screeshots/T6.4.JPG)
+![T6.4](screenshots/T6.4.JPG)
 
 ---
