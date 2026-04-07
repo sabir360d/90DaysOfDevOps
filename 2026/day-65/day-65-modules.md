@@ -44,133 +44,31 @@ Create all the directories and empty files. This is the standard layout every Te
 Create `modules/ec2-instance/`:
 
 ### `modules/ec2-instance/variables.tf`
+[variables.tf](terraform-modules/modules/ec2-instance/variables.tf)
 
-```hcl
-variable "ami_id" {
-  type = string
-}
-
-variable "instance_type" {
-  type    = string
-  default = "t3.micro"
-}
-
-variable "subnet_id" {
-  type = string
-}
-
-variable "security_group_ids" {
-  type = list(string)
-}
-
-variable "instance_name" {
-  type = string
-}
-
-variable "tags" {
-  type    = map(string)
-  default = {}
-}
-```
 
 ### `modules/ec2-instance/main.tf`
+[main.tf](terraform-modules/modules/ec2-instance/main.tf)
 
-```hcl
-resource "aws_instance" "this" {
-  ami           = var.ami_id
-  instance_type = var.instance_type
-  subnet_id     = var.subnet_id
-
-  vpc_security_group_ids = var.security_group_ids
-
-  tags = merge(
-    {
-      Name = var.instance_name
-    },
-    var.tags
-  )
-}
-```
 
 ### `modules/ec2-instance/outputs.tf`
+[outputs.tf](terraform-modules/modules/ec2-instance/outputs.tf)
 
-```hcl
-output "instance_id" {
-  value = aws_instance.this.id
-}
 
-output "public_ip" {
-  value = aws_instance.this.public_ip
-}
-
-output "private_ip" {
-  value = aws_instance.this.private_ip
-}
-```
+---
 
 ### Task 3: Build a Custom Security Group Module
 
 1. `modules/security-group/variables.tf`
+[sg-variables.tf](terraform-modules/modules/security-group/variables.tf)
 
-```hcl
-variable "vpc_id" {
-  type = string
-}
-
-variable "sg_name" {
-  type = string
-}
-
-variable "ingress_ports" {
-  type    = list(number)
-  default = [22, 80]
-}
-
-variable "tags" {
-  type    = map(string)
-  default = {}
-}
-```
-
----
 
 2. `modules/security-group/main.tf`
+[sg-main.tf](terraform-modules/modules/security-group/main.tf)
 
-```hcl
-resource "aws_security_group" "this" {
-  name   = var.sg_name
-  vpc_id = var.vpc_id
-
-  dynamic "ingress" {
-    for_each = var.ingress_ports
-    content {
-      from_port   = ingress.value
-      to_port     = ingress.value
-      protocol    = "tcp"
-      cidr_blocks = ["0.0.0.0/0"]
-    }
-  }
-
-  egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  tags = var.tags
-}
-```
-
----
 
 3. `modules/security-group/outputs.tf`
-
-```hcl
-output "sg_id" {
-  value = aws_security_group.this.id
-}
-```
+[sg-output.tf](terraform-modules/modules/security-group/outputs.tf)
 
 ---
 
@@ -178,77 +76,25 @@ output "sg_id" {
 In the root `main.tf`, wire everything together:
 
 1. Create a VPC and subnet directly: Root Module (`main.tf`)
+2. Call the security group module
+3. Call the EC2 module -- deploy **two instances** with different names using the same module:
+4. Add root outputs that reference module outputs:
 
-```hcl
-# Common tags
-locals {
-  common_tags = {
-    Project = var.project_name
-    Owner   = "Sabir"
-  }
-}
+[tm-main](terraform-modules/main.tf)
+[tm-ouputs](terraform-modules/outputs.tf)
 
-# Fetch latest Amazon Linux AMI
-data "aws_ami" "amazon_linux" {
-  most_recent = true
-  owners      = ["amazon"]
-
-  filter {
-    name   = "name"
-    values = ["amzn2-ami-hvm-*"]
-  }
-}
-
-# VPC from Terraform Registry
-module "vpc" {
-  source  = "terraform-aws-modules/vpc/aws"
-  version = "~> 5.0"
-
-  name = "terraweek-vpc"
-  cidr = "10.0.0.0/16"
-
-  azs             = ["us-east-1a", "us-east-1b"]
-  public_subnets  = ["10.0.1.0/24", "10.0.2.0/24"]
-  private_subnets = ["10.0.3.0/24", "10.0.4.0/24"]
-
-  enable_nat_gateway   = false
-  enable_dns_hostnames = true
-
-  tags = local.common_tags
-}
-
-# Security Group Module
-module "web_sg" {
-  source        = "./modules/security-group"
-  vpc_id        = module.vpc.vpc_id
-  sg_name       = "terraweek-web-sg"
-  ingress_ports = [22, 80, 443]
-  tags          = local.common_tags
-}
-
-# EC2 Instance - Web
-module "web_server" {
-  source             = "./modules/ec2-instance"
-  ami_id             = data.aws_ami.amazon_linux.id
-  instance_type      = "t3.micro"
-  subnet_id          = module.vpc.public_subnets[0]
-  security_group_ids = [module.web_sg.sg_id]
-  instance_name      = "terraweek-web"
-  tags               = local.common_tags
-}
-
-# EC2 Instance - API
-module "api_server" {
-  source             = "./modules/ec2-instance"
-  ami_id             = data.aws_ami.amazon_linux.id
-  instance_type      = "t3.micro"
-  subnet_id          = module.vpc.public_subnets[0]
-  security_group_ids = [module.web_sg.sg_id]
-  instance_name      = "terraweek-api"
-  tags               = local.common_tags
-}
-
+5. Apply:
+```bash
+terraform init    # Downloads/links the local modules
+terraform plan    # Should show all resources from both module calls
+terraform apply
 ```
+
+![T4](screenshots/T4.JPG)
+
+
+![T4a](screenshots/T4a.JPG)
+
 
 ---
 
@@ -286,8 +132,6 @@ terraform apply
 
 4. Compare: how many resources did the VPC module create vs your hand-written VPC from Day 62?
 
-**Document:** Where does Terraform download registry modules to? Check `.terraform/modules/`.
-
 ## Registry vs Hand-Written VPC
 
 | Aspect      | Hand-Written VPC | Registry Module  |
@@ -297,7 +141,7 @@ terraform apply
 | NAT/DNS     | Manual           | Built-in options |
 | Reusability | Low              | High             |
 
----
+
 
 | Resource Type               | Hand-written VPC (Day 62) | Module VPC (Day 65) |
 | --------------------------- | ------------------------- | ------------------- |
@@ -321,10 +165,15 @@ The registry module created significantly more resources (route tables, IGW, ass
 .terraform/modules/
 ```
 
----
+![T5](screenshots/T5.JPG)
 
-![T5](screenshots/T5)
+![T5a](screenshots/T5a.JPG)
 
+![T5b](screenshots/T5b.JPG)
+
+![T5c](screenshots/T5c.JPG)
+
+![T5d](screenshots/T5d.JPG)
 
 ---
 
@@ -347,6 +196,10 @@ Notice the `module.vpc.`, `module.web_server.`, `module.web_sg.` prefixes.
 ```bash
 terraform destroy
 ```
+
+![T6](screenshots/T6.JPG)
+
+---
 
 **Document:** Write down five module best practices:
 
