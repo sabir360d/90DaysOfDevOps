@@ -1,24 +1,5 @@
-Below is a **clean, task-wise, well-documented** version of your assignment using:
-
-* **Ubuntu 22.04**
-* **Manual EC2 launch (Option B)**
-* **3 instances (web, app, db)**
-* **t3.micro (free tier eligible on Amazon Web Services)**
-* Includes **SSH key creation**, **Ansible setup**, and **inventory**
-
-You can copy this directly as your submission.
-
----
-
-# 📘 `day-68-ansible-intro.md`
-
----
-
-# Day 68 — Introduction to Ansible and Inventory Setup (Manual EC2)
-
----
-
-## 🧠 Task 1: Understanding Ansible
+# Day 68 — Introduction to Ansible and Inventory Setup
+## Task 1: Understanding Ansible
 
 ### 1. What is Configuration Management?
 
@@ -41,12 +22,12 @@ Configuration management ensures that servers are:
 
 | Tool    | Agent Required | Language | Model     |
 | ------- | -------------- | -------- | --------- |
-| Ansible | ❌ No           | YAML     | Push      |
-| Chef    | ✅ Yes          | Ruby     | Pull      |
-| Puppet  | ✅ Yes          | DSL      | Pull      |
-| Salt    | ✅ Mostly       | YAML     | Push/Pull |
+| Ansible |   No           | YAML     | Push      |
+| Chef    |   Yes          | Ruby     | Pull      |
+| Puppet  |   Yes          | DSL      | Pull      |
+| Salt    |   Mostly       | YAML     | Push/Pull |
 
-👉 Ansible is simpler and agentless.
+Ansible is agentless and idempotent.
 
 ---
 
@@ -67,76 +48,9 @@ Configuration management ensures that servers are:
 
 ---
 
-# ☁️ Task 2: Set Up Lab (Manual AWS EC2)
+## Task 2: Set Up Your Lab Environment (Manual AWS EC2)
 
-## Step 1: Create SSH Key Pair (VERY IMPORTANT)
-
-### Option A: Create via AWS Console
-
-1. Go to EC2 → **Key Pairs**
-2. Click **Create Key Pair**
-3. Settings:
-
-   * Name: `ansible-key`
-   * Type: RSA
-   * Format: `.pem`
-4. Download file → `ansible-key.pem`
-
----
-
-### 🔐 Set Permissions (on your machine)
-
-```bash
-chmod 400 ansible-key.pem
-```
-
----
-
-### Option B: Create Key Locally (Recommended for learning)
-
-```bash
-ssh-keygen -t rsa -b 4096 -f ansible-key
-```
-
-This creates:
-
-* `ansible-key` (private key)
-* `ansible-key.pub` (public key)
-
-👉 Upload the **public key** to AWS manually if needed.
-
----
-
-## Step 2: Launch 3 EC2 Instances
-
-Go to EC2 → **Launch Instance**
-
-### Common Configuration for ALL 3:
-
-* **AMI:** Ubuntu Server 22.04 LTS
-* **Instance Type:** t3.micro
-* **Key Pair:** `ansible-key`
-* **Network:** Default VPC
-
----
-
-## 🔥 Security Group (Important)
-
-Create a new security group:
-
-### Rules:
-
-| Type | Port | Source                |
-| ---- | ---- | --------------------- |
-| SSH  | 22   | 0.0.0.0/0 (temporary) |
-| HTTP | 80   | 0.0.0.0/0             |
-
-👉 For better security later:
-Use **your IP instead of 0.0.0.0/0**
-
----
-
-## Step 3: Name Your Instances
+## Instances Label 
 
 | Instance   | Name Tag   | Role |
 | ---------- | ---------- | ---- |
@@ -146,19 +60,7 @@ Use **your IP instead of 0.0.0.0/0**
 
 ---
 
-## Step 4: Get Public IPs
-
-After launch, copy:
-
-```bash
-WEB_IP=
-APP_IP=
-DB_IP=
-```
-
----
-
-## Step 5: SSH Into Each Instance
+## Verify you can SSH into each one from your control node:
 
 ```bash
 ssh -i ansible-key.pem ubuntu@<WEB_IP>
@@ -166,13 +68,9 @@ ssh -i ansible-key.pem ubuntu@<APP_IP>
 ssh -i ansible-key.pem ubuntu@<DB_IP>
 ```
 
-✅ Verify you can log in successfully.
-
 ---
 
-# ⚙️ Task 3: Install Ansible (Control Node)
-
-👉 Use your **local machine** or one EC2 as control node
+# Task 3: Install Ansible (Control Node)
 
 ### Install:
 
@@ -189,117 +87,82 @@ ansible --version
 
 ---
 
-### 📌 Why only control node?
+### Why only control node (web-server)?
 
 Because Ansible is **agentless** — it uses SSH to connect.
 
 ---
 
-# 📁 Task 4: Create Inventory
+## Task 4: Create Your Inventory File
 
 ```bash
-mkdir ansible-practice
-cd ansible-practice
-nano inventory.ini
+mkdir ansible-practice && cd ansible-practice
+vim inventory.ini
 ```
-
----
-
 ### inventory.ini
 
 ```ini
 [web]
-web ansible_host=<WEB_IP>
+web1 ansible_host=<WEB_PUBLIC_IP>
 
 [app]
-app ansible_host=<APP_IP>
+app1 ansible_host=<APP_PUBLIC_IP>
 
 [db]
-db ansible_host=<DB_IP>
+db1 ansible_host=<DB_PUBLIC_IP>
 
 [all:vars]
 ansible_user=ubuntu
 ansible_ssh_private_key_file=~/ansible-key.pem
 ```
-
----
-
-## Test Connectivity
+### Test Connectivity
 
 ```bash
 ansible all -i inventory.ini -m ping
 ```
 
-### Expected Output:
 
-```json
-"ping": "pong"
-```
 
 ---
 
-## 🛠️ Troubleshooting
+## Task 5: Run Ad-Hoc Commands
+Ad-hoc commands let you run quick one-off tasks without writing a playbook
 
-* Wrong user? → use `ubuntu`
-* Key issue? → `chmod 400 ansible-key.pem`
-* SSH blocked? → check security group
 
----
-
-# 🚀 Task 5: Ad-Hoc Commands
-
----
-
-### 1. Check uptime
-
+1. **Check uptime on all servers:**
 ```bash
-ansible all -m command -a "uptime"
+ansible all -i inventory.ini -m command -a "uptime"
 ```
 
----
-
-### 2. Check memory (web only)
-
+2. **Check free memory on web servers only:**
 ```bash
-ansible web -m command -a "free -h"
+ansible web -i inventory.ini -m command -a "free -h"
 ```
 
----
-
-### 3. Check disk
-
+3. **Check disk space on all servers:**
 ```bash
-ansible all -m command -a "df -h"
+ansible all -i inventory.ini -m command -a "df -h"
 ```
 
----
-
-### 4. Install Git
-
+4. **Install a package on the web group:**
 ```bash
-ansible web -m apt -a "name=git state=present" --become
+ansible web -i inventory.ini -m yum -a "name=git state=present" --become
 ```
+(Use `apt` instead of `yum` if running Ubuntu)
 
----
-
-### 5. Copy file
-
+5. **Copy a file to all servers:**
 ```bash
 echo "Hello from Ansible" > hello.txt
-ansible all -m copy -a "src=hello.txt dest=/tmp/hello.txt"
+ansible all -i inventory.ini -m copy -a "src=hello.txt dest=/tmp/hello.txt"
 ```
 
----
-
-### 6. Verify file
-
+6. **Verify the file was copied:**
 ```bash
-ansible all -m command -a "cat /tmp/hello.txt"
+ansible all -i inventory.ini -m command -a "cat /tmp/hello.txt"
 ```
 
----
-
-# 🔐 What Does `--become` Do?
+**Document:** 
+### What Does `--become` Do?
 
 * Acts like `sudo`
 * Gives root privileges
@@ -312,12 +175,8 @@ ansible all -m command -a "cat /tmp/hello.txt"
 
 ---
 
-# 🧩 Task 6: Inventory Groups
-
----
-
-### Update inventory.ini
-
+## Task 6: Explore Inventory Groups and Patterns
+1. **Create a group of groups** -- add this to your `inventory.ini`:
 ```ini
 [application:children]
 web
@@ -328,70 +187,37 @@ application
 db
 ```
 
----
-
-### Test Groups
-
+2. Run commands against different groups:
 ```bash
-ansible application -m ping
-ansible db -m ping
-ansible all_servers -m ping
+ansible application -i inventory.ini -m ping     # web + app servers
+ansible db -i inventory.ini -m ping               # only db server
+ansible all_servers -i inventory.ini -m ping      # everything
 ```
 
----
-
-### Patterns
-
+3. **Use patterns:**
 ```bash
-ansible 'web:app' -m ping
-ansible 'all:!db' -m ping
+ansible 'web:app' -i inventory.ini -m ping        # OR: web or app
+ansible 'all:!db' -i inventory.ini -m ping        # NOT: all except db
 ```
 
----
-
-# ⚙️ ansible.cfg
-
-```bash
-nano ansible.cfg
-```
-
+4. **Create an `ansible.cfg`** to avoid typing `-i inventory.ini` every time:
 ```ini
 [defaults]
 inventory = inventory.ini
 host_key_checking = False
-remote_user = ubuntu
-private_key_file = ~/ansible-key.pem
+remote_user = ec2-user
+private_key_file = ~/your-key.pem
 ```
 
----
-
-### Now run:
-
+Now you can simply run:
 ```bash
 ansible all -m ping
 ```
 
----
+**Verify:** Does `ansible all -m ping` work without specifying the inventory file?
 
-# ⚖️ Command vs Shell Module
 
-| Feature   | command | shell  |
-| --------- | ------- | ------ |
-| Safe      | ✅ Yes   | ❌ Less |
-| Pipes     | ❌ No    | ✅ Yes  |
-| Redirects | ❌       | ✅      |
-
----
-
-### Example:
-
-```bash
-ansible all -m shell -a "df -h | grep /dev"
-```
-
----
-
-# ✅ Final Outcome
+## Summary:
 
 * 3 Ubuntu EC2 instances created
 * SSH access configured
@@ -400,21 +226,4 @@ ansible all -m shell -a "df -h | grep /dev"
 * Ad-hoc commands executed successfully
 
 ---
-
-# 🧹 Cleanup Reminder
-
-Terminate instances from EC2 console to avoid charges.
-
----
-
-# 🚀 Next Step
-
-Day 69:
-
-* Write your first **Ansible Playbook**
-* Automate Nginx deployment on web server
-
----
-
-If you want, I can **review your actual inventory or debug your ping errors** — that’s usually where beginners get stuck.
 
