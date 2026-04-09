@@ -1,0 +1,29 @@
+---
+- name: Web servers
+  hosts: web
+  become: true
+  tasks:
+    - name: Install Nginx
+      apt:
+        name: nginx
+        state: present
+
+- name: App servers
+  hosts: app
+  become: true
+  tasks:
+    - name: Install dependencies
+      apt:
+        name:
+          - gcc
+          - make
+        state: present
+
+- name: DB servers
+  hosts: db
+  become: true
+  tasks:
+    - name: Install MySQL client
+      apt:
+        name: mysql-client
+        state: present

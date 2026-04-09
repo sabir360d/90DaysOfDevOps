@@ -1,0 +1,21 @@
+---   
+- name: Install and start Nginx    # PLAY (targets a group)
+  hosts: web                       # Inventory group
+  become: true                     # Run as root (sudo)
+
+  tasks:                           # List of tasks
+    - name: Install Nginx          # TASK
+      apt:                         # MODULE (use yum for Amazon Linux)
+        name: nginx
+        state: present             # Ensure installed
+
+    - name: Start and enable Nginx
+      service:
+        name: nginx
+        state: started             # Ensure running
+        enabled: true              # Start on boot
+
+    - name: Create custom index page
+      copy:
+        content: "<h1>Deployed by Ansible - TerraWeek Server</h1>"
+        dest: /usr/share/nginx/html/index.html
