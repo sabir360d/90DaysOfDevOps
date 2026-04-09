@@ -58,6 +58,9 @@ Ansible is agentless and idempotent.
 | Instance 2 | app-server | App  |
 | Instance 3 | db-server  | DB   |
 
+
+![T2](screenshots/T2.JPG)
+
 ---
 
 ## Verify you can SSH into each one from your control node:
@@ -67,6 +70,8 @@ ssh -i ansible-key.pem ubuntu@<WEB_IP>
 ssh -i ansible-key.pem ubuntu@<APP_IP>
 ssh -i ansible-key.pem ubuntu@<DB_IP>
 ```
+
+![T2a](screenshots/T2a.JPG)
 
 ---
 
@@ -121,7 +126,7 @@ ansible_ssh_private_key_file=~/ansible-key.pem
 ansible all -i inventory.ini -m ping
 ```
 
-
+![T4](screenshots/T4.JPG)
 
 ---
 
@@ -160,6 +165,9 @@ ansible all -i inventory.ini -m copy -a "src=hello.txt dest=/tmp/hello.txt"
 ```bash
 ansible all -i inventory.ini -m command -a "cat /tmp/hello.txt"
 ```
+![T5](screenshots/T5.JPG)
+
+---
 
 **Document:** 
 ### What Does `--become` Do?
@@ -193,12 +201,17 @@ ansible application -i inventory.ini -m ping     # web + app servers
 ansible db -i inventory.ini -m ping               # only db server
 ansible all_servers -i inventory.ini -m ping      # everything
 ```
+![T6.2](screenshots/T6.2.JPG)
+
 
 3. **Use patterns:**
 ```bash
 ansible 'web:app' -i inventory.ini -m ping        # OR: web or app
 ansible 'all:!db' -i inventory.ini -m ping        # NOT: all except db
 ```
+
+![T6.3](screenshots/T6.3.JPG)
+
 
 4. **Create an `ansible.cfg`** to avoid typing `-i inventory.ini` every time:
 ```ini
@@ -216,6 +229,7 @@ ansible all -m ping
 
 **Verify:** Does `ansible all -m ping` work without specifying the inventory file?
 
+![T6.4](screenshots/T6.4.JPG)
 
 ## Summary:
 
