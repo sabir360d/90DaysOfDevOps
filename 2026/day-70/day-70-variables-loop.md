@@ -9,17 +9,19 @@
 * Directory `/opt/terraweek-app` created
 * Packages installed using `package` module
 
+![alt text](scereenshots/T1-cli.JPG)
+
 ## CLI Override Test
 
 ```bash
 ansible-playbook variables-demo.yml
 ```
 
+![alt text](scereenshots/T1-cli.JPG)
+
 ### Observation
 
 * CLI variables **override playbook variables**
-
-
 
 ---
 
@@ -29,7 +31,7 @@ ansible-playbook variables-demo.yml
 
 - Project Structure:
 
-screenshot
+[alt text](scereenshots/T2a.JPG)
 
 ## Variable Files:
 
@@ -45,7 +47,8 @@ screenshot
 ### host_vars/web1.yml
 * Applied only to `web1`
 
----
+![alt text](scereenshots/T2.JPG)
+
 
 ## Playbook Execution Output Highlights
 
@@ -53,8 +56,6 @@ screenshot
 HTTP port: 80, Max connections: 2000
 This is the primary web server
 ```
-
----
 
 ## Observations
 
@@ -64,7 +65,6 @@ This is the primary web server
 * Host-specific variable `custom_message` worked correctly
 * `app1` and `db1` did not run web-specific tasks
 
----
 
 ## Variable Precedence
 
@@ -78,12 +78,6 @@ group_vars/all
 < task vars
 < extra vars (-e)
 ```
-
-### Example:
-
-* `group_vars/web.yml` → `max_connections: 1000`
-* `host_vars/web1.yml` → `max_connections: 2000`
-
 ---
 
 #  Task 3: Ansible Facts
@@ -96,15 +90,9 @@ ansible web -m setup -a "filter=ansible_distribution"
 ansible web -m setup -a "filter=ansible_memtotal_mb"
 ```
 
----
+![alt text](scereenshots/T3a.JPG)
 
-## Example Output
-
-```text
-OS: Amazon 2023
-IP: 172.31.x.x
-RAM: 916MB
-```
+![alt text](scereenshots/T3b.JPG)
 
 ---
 
@@ -115,6 +103,8 @@ RAM: 916MB
 * `ansible_memtotal_mb` → memory checks
 * `ansible_default_ipv4.address` → networking
 * `ansible_hostname` → host identification
+
+![alt text](scereenshots/T3c.JPG)
 
 ---
 
@@ -140,6 +130,10 @@ RAM: 916MB
   when: ansible_memtotal_mb < 1024
   ```
 
+![alt text](scereenshots/T4a.JPG)
+
+![alt text](scereenshots/T4b.JPG)
+
 ---
 
 ## Observations
@@ -162,16 +156,6 @@ RAM: 916MB
 
 ---
 
-## Example Output
-
-```text
-(item={'name': 'deploy', 'groups': 'wheel'})
-(item={'name': 'monitor', 'groups': 'wheel'})
-(item={'name': 'appuser', 'groups': 'users'})
-```
-
----
-
 ## Loop vs with_items
 
 * `loop` is the modern and recommended method
@@ -191,6 +175,10 @@ RAM: 916MB
 
 * Always use `loop` in modern Ansible playbooks
 
+![alt text](scereenshots/T5a.JPG)
+
+![alt text](scereenshots/T5b.JPG)
+
 ---
 
 #  Task 6: Server Health Report
@@ -204,18 +192,9 @@ RAM: 916MB
 
 ---
 
-## Sample Output
+![alt text](scereenshots/T6a.JPG)
 
-```text
-========== web1 ==========
-OS: Amazon 2023
-IP: 172.31.28.15
-RAM: 916MB
-Disk: /dev/nvme0n1p1  8.0G  1.7G  6.3G  22% /
-Running services: 20
-```
-
----
+![alt text](scereenshots/T6b.JPG)
 
 ## File Verification
 
@@ -223,16 +202,8 @@ Running services: 20
 cat /tmp/server-report-*.txt
 ```
 
-### Output:
+![alt text](scereenshots/T6c.JPG)
 
-```
-Server: web1
-OS: Amazon 2023
-IP: 172.31.28.15
-RAM: 916MB
-Disk: Filesystem      Size  Used Avail Use% Mounted on
-/dev/nvme0n1p1  8.0G  1.7G  6.3G  22% /
-Checked at: 2026-04-10T06:49:00Z
 ```
 
 ---
@@ -247,14 +218,3 @@ Checked at: 2026-04-10T06:49:00Z
 * Timestamp generated correctly
 
 ---
-
-# Final Outcome
-
-* Dynamic infrastructure using variables ✅
-* Environment-aware execution using facts ✅
-* Conditional automation using `when` ✅
-* Efficient repetition using loops ✅
-* Real-time system reporting with register ✅
-
----
-
