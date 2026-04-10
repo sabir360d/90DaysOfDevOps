@@ -31,7 +31,7 @@ ansible-playbook variables-demo.yml
 
 - Project Structure:
 
-[alt text](scereenshots/T2a.JPG)
+![alt text](scereenshots/T2a.JPG)
 
 ## Variable Files:
 
