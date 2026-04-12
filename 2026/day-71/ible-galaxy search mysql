@@ -1,0 +1,692 @@
+
+Found 686 roles matching your search:
+
+ Name                                                       Description
+ ----                                                       -----------
+ 0amalpartida0.ansible_role_mysql57                         install mysql community 5.7
+ tenequm.mysql                                              Simply installs MySQL 5.7 on Xenial.
+ 4linuxdevops.mysql-server                                  Instalacao e Configuracao do servidor MySQL
+ 4linuxhd.mysql_server                                      Instalacao e Configuracao do servidor MySQL
+ 5KYDEV0P5.skydevops-mysql                                  Install and configure MySQL Database
+ 6nsh.mysql_server                                          Install and configure MySQL Community Server 8.0
+ abednarik.mysqld-exporter                                  Install and configure mysqld_exporter
+ aboveops.ct_mysql                                          Ansible role deploys MySQL container
+ acandid.mysql                                              Install MySQL 8 on RedHat/CentOS 8 and Create user and database.
+ infOpen.mysql-backup                                       configure mysql-backup with xtrabackup and mysqldump
+ infOpen.mysql-server                                       Install mysql-server package
+ adarnimrod.mysql                                           Provision a MySQL server
+ adelmosilva.mysql_server                                   Instalacao e Configuracao do servidor MySQL
+ AdopteUnOps.mysql-docker                                   Ansible role to run a mysql container.
+ adshafqat.ansible_role_mysql                               Solution Designer
+ akli1512.ansible_role_mysql                                your role description
+ albiurs.ansible_role_mysql                                 System & DevOps Engineer
+ aleguedes1983.mysql_server                                 Instalacao e Configuracao do servidor MySQL
+ alexandresvieira.mysql-server                              Instalacao e Configuracao do servidor MySQL
+ alexrmarques.mysql_server                                  Instalacao e Configuracao do servidor MySQL
+ alikins.mysql                                              MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ alikins.php_mysql                                          PHP MySQL support for Linux.
+ alisio.mysql_server                                        Instalacao e Configuracao do servidor MySQL
+ almaops.ct_mysql                                           Ansible role deploys MySQL container
+ almaops.ct_mysqld_exporter                                 Ansible role creates mysqld-exporter container
+ almaops.mysqld                                             Role for deploying MySQL server
+ alvarooneto.mysql_server                                   Instalacao e Configuracao do servidor MySQL
+ amahendran19.mysql                                         Ansible role to deploy MySQL database server.
+ aminvakil.mysql_add_user                                   Adds MySQL User and DB on Debian Buster
+ aminvakil.mysql_initial                                    Installs and Configures MariaDB on Debian Buster
+ amtega.mysql                                               Setup mysql with replication config
+ amtega.mysql_jdbc_connector                                Setup MySQL JDBC connector
+ andpupilo0182.mysql_server                                 Instalacao e Configuracao do servidor MySQL
+ andreidba.ansible_role_mysql                               DBA
+ andrelohmann.mysql_grants                                  ansible galaxy role to deploy mysql grants
+ andrelohmann.percona_mysql                                 ansible galaxy role to install percona-server
+ andyceo.mysql                                              Install MySQL and allow to adjust some MySQL settings. Also allow to create databases, users and handle privilleges.
+ anezhyvyi.mysql                                            MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ ansiblebit.mysql-server                                    Role for MySQL server on MacOSX.
+ ansibleplaybookbundle.mysql_apb                            Software Collections MySQL APB
+ antonchernik.mysql                                         Install MySQL server 5.7
+ antonchernik.mysql-connector-java                          Ansible Role for MySQL Connector/J Installation.
+ antongorkovenko.mysql                                      MySQL server installation
+ antoniorufo.ansible_role_mysql                             DevOps
+ antonmatsiuk.prom_mysql_exporter                           Prometheus MySQL exporter on CentOS7 / RHEL7
+ ANXS.mysql                                                 MySQL install and configuration (hardening, databases, users, ...)
+ apolloclark.mysql                                          MySQL server for Debian/Ubuntu.
+ apolloclark.mysql_deploy                                   Deploy a MySQL script
+ apolloclark.mysql_mcafee_audit                             Install and configure the McAfee audit plugin.
+ ashokgelal.mysql                                           Installs MySQL or MariaDB
+ asombie.ansible_role_mysql                                 Linux System Administrator
+ auciomar.4linux_mysql_server                               Instalacao e Configuracao do servidor MySQL
+ augustohp.mysql                                            MySQL server for RHEL/CentOS 6.x and Debian/Ubuntu
+ axelitus.mysql                                             
+ aydintd.percona_mysql                                      Ansible role for Percona Mysql
+ azavea.mysql                                               An Ansible role for installing MySQL.
+ Azulinho.azulinho-mysql-server                             Ansible role for deploy mysql-server
+ bamaralf.wso2-mysql_setup                                  This ansible role sets up mysql  database to work with WSO2 basic installation.
+ barbarabranco.mysql_ansible                                Instalacao e Configuracao do servidor MySQL
+ bbln111.ansible_role_mysql                                 your role description
+ bbranco89.mysql_server_ansible                             Instalacao e Configuracao do servidor MySQL
+ bearandgiraffe.mysql                                       Installs MySQL
+ bmildren.percona_mysql                                     An Ansible role for Percona Server (MySQL)
+ bennojoy.mysql                                             ansible role for mysql
+ bershin.ansible_role_mysql                                 Deploy Web Server using Python flask and Mysql DB
+ blopiccolo90.mysql_machine_ansible_role                    your description
+ boborano.ansible_role_mysql                                Solutions Architect
+ bodsch.automysqlbackup                                     ansible role to install and configure automysqlbackup
+ Boonyah.mysql-import                                       Mysql Import from SQL
+ bpresles.mysql                                             MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ brunopisca.mysql_server                                    Instalacao e Configuracao do servidor MySQL
+ brunosoareswl.mysql_server                                 Instalacao e Configuracao do servidor MySQL
+ bsantanab.mysql_server                                     Instalacao e Configuracao do servidor MySQL
+ buluma.automysqlbackup                                     Installs automysqlbackup on Debian/Ubuntu linux servers.
+ buluma.mysql                                               Install and configure mysql on your system.
+ buluma.php_mysql                                           PHP MySQL support for Linux.
+ cel8029.mysql-server                                       Instalacao e Configuracao do servidor MySQL
+ chandra975.mysql                                           your description
+ chengzhang1016.mysql_apb                                   Software Collections MySQL APB
+ chirag01jain.ansible_role_mysql                            Customer Success Engineer
+ City-of-Bloomington.mysql                                  Role for configuring MySQL on Ubuntu
+ claudiolis.mysql_server                                    Instalacao e Configuracao do servidor MySQL
+ clivewalkden.ansible_role_mysql                            MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ cloud3rsio.yumrepo_mysql                                   install mysql repository
+ cloudalchemy.mysqld_exporter                               Prometheus Mysqld Exporter
+ clouddrove.ansible_role_docker_mysql_node_exporter         This ansible role is used to install Redis server into Docker.
+ clouddrove.ansible_role_mysql                              This ansible role install mysql server for Debian.
+ cloudengineer4linux.mysql_server                           Instalacao e Configuracao do servidor MySQL
+ clusterfrak.mysql                                          Role to install MySQL
+ codezm.mysql                                               Mysql Sever for RHEL/CentOS.
+ corehook.mysql                                             MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ Cougar.mysql                                               A basic mysql role.
+ cowops.debian-mysql                                        Install Mysql for debian system
+ creidinger.mysql_dump                                      MySQL setup for Debian/Ubuntu
+ creidinger.mysql_server                                    MySQL setup for Debian/Ubuntu
+ criyolee.ansible_role_mysql                                simple ansible role to install mysql database
+ custu2000.role_mysql_test                                  THIS_IS_A_TEST_POC
+ cutwater.mysql_db                                          Add or remove MySQL databases from a remote host.
+ cutwater.mysql_replication                                 Manage MySQL replication
+ cutwater.mysql_user                                        Adds or removes a user from a MySQL database.
+ cutwater.mysql_variables                                   Manage MySQL global variables
+ daixijun.mysql                                             安装mysql,并配置主从或MGR集群
+ daixijun.mysqlrouter                                       MySQL Router
+ daixijun.mysqlshell                                        MySQL Shell 初始化 Innodb Cluster 集群
+ damianlewis.mysql                                          MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ daniloc26.mysql_server                                     Instalacao e Configuracao do servidor MySQL
+ darexsu.mysql                                              install and configure MySQL-server from distro or third party repo
+ datadog-galaxy.mysql                                       MySQL 5.6 provision role
+ Deepak-Khandelwal.ansible-mysql                            ansible role for mysql
+ deeps3791.ansible_role_mysql                               QA Engineer
+ deimosfr.mysql                                             Ansible playbook for MySQL
+ denitol.ansible_role_mysql                                 install mysql-server
+ devalto.mysql                                              MySQL server Ubuntu.
+ devops.mysql                                               Install and configure MySQL or MariaDB server on RHEL/CentOS
+ dev-sec.mysql                                              MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ dev-sec.mysql-hardening                                    This Ansible playbook provides security configuration for mysql.
+ dgnest.mysql                                               Ansible role to install mysql
+ dhnirshad.ansible_role_mysql                               Software Engineer
+ diptajeet.mysql                                            Installation of MySQL Database
+ dmae3.galaxy-mysql                                         Role of installing MySQL
+ dmitrybelyakov.localcloud-mysql                            This is a simple role to install mysql on Ubuntu and manage users. No replication or table management here.
+ dmitrybelyakov.localcloud-mysql51compiled                  This role is created for legacy systems that need MySQL 5.1 and since it's not available from official repositories it will compile it from sourcecode.
+ dotfob.mysql_server                                        Instalacao e Configuracao do servidor MySQL
+ douglasmsi.mysql_ansible                                   Instalacao e Configuracao do servidor MySQL
+ dsofeir.mysql_percona_mariadb                              An ansible role which initialises MySQL/Percona/MariaDB Server software on a host
+ dtorresf.mysql-backup-s3                                   Ansible role to backup mysql databases and copy them to amazon s3 bucket
+ dtorresf.rds_mysql_backup_s3                               An ansible role to backup a Mysql RDS instance
+ dustinrue.mysql                                            Simple MySQL Installer.
+ dzangolab.docker_mysql                                     Install mysql as a docker container
+ dzangolab.docker_mysql_backup                              Backup mysql database to AWS S3 via docker container
+ ebufaino.mysql_server                                      Instalacao e Configuracao do servidor MySQL
+ ecaepp.ansible_role_mysql                                  Basic MySQL install for Ubuntu 16.04.
+ ecdsantos.mysql-server                                     Instalacao e Configuracao do servidor MySQL
+ edgarvicentini.mysql_server                                Instalacao e Configuracao do servidor MySQL
+ edhideki.mysql_server                                      Instalacao e Configuracao do servidor MySQL
+ edmondscommerce.ansible_role_mysql_backup                  Setup a cron job for regular full Mysql/Mariadb database dumps
+ eduardodnp.mysql_server                                    Instalacao e Configuracao do servidor MySQL
+ eduardokidas.mysql_server                                  Instalacao e Configuracao do servidor MySQL
+ EHER.mysql                                                 Role to install mysql, create database, user and handle privilleges.
+ EHER.mysql_snapshot                                        Role to create and restore snapshots from mysql databases. They are stered into S3 bucket to allow restores from any server.
+ ElaoInfra.mysql                                            A MySQL Server role for elao symfony standard vagrant box
+ elffirein.mysql_ansible_role                               Automation Architect
+ elnebuloso.docker-mysql                                    MySQL Server for Docker
+ elyesbenamor.ansible_role_mysql                            Devops engineer
+ eniocarboni.mysql                                          Install, secure mysql/mariadb server and create dbs and users
+ entercloudsuite.mysql                                      Playbook for mysql.
+ entercloudsuite.mysql-innobackupex                         Playbook for mysql-innobackupex.
+ ericmdev.php56-mysql                                       PHP 5.6 MySQL support for RedHat/CentOS 6.x
+ ericsysmin.mysqlbix                                        Ansible Role for deploying the mysqlbix addon for monitoring MySQL with Zabbix
+ evogalaxy.mysql                                            your description
+ ewypych.mysql-db-user                                      Role creates databases and their users
+ ewypych.oracle-mysql-repo                                  Oracle MySQL Repository installation.
+ exphost.mysql                                              Create mysql instance
+ exphost.mysql_content                                      Configure mysql users and databases
+ ezlee.ansible-mysql                                        
+ fabceolin.ansible_docker_mysql                             Install mysql as a docker container
+ felipefmartins.mysql-server                                Instalacao e Configuracao do servidor MySQL
+ ffornari90.ansible_role_mysql                              your role description
+ fidanf.mysql                                               MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ flyvictor.mysql                                            MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ fourforbusiness.mysql-prepare-db                           Imports database dumps, executes additional MySQL Scripts and can replace specific text parts in the dumps
+ fractalic.mysql-rootpass                                   Reset the root password of a mysql server.
+ franklinpashok.mysqlrole                                   Lead Consultant
+ freehck.script_mysql_backup                                install a script performing mysql backups
+ frogasia.ansible-role-mysql                                MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ fscojr.mysql                                               Instalacao e Configuracao do servidor MySQL
+ ftcsm.mysql_server                                         Instalacao e Configuracao do servidor MySQL
+ gabrielke.mysql                                            MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ gacerioni.mysql_ansible                                    Instalacao e Configuracao do servidor MySQL
+ gambinodaniele.ansible_role_mysql                          Solution Architect
+ gano2018.ansible_mysql                                     install mysql server
+ garutilorenzo.ansible_role_linux_mysql                     Install and configure MySQL Server and MySQL InnoDB Cluster
+ gavarito.mysql_server                                      Instalacao e Configuracao do servidor MySQL
+ gcoop-libre.mysqldump                                      MySQL Backup using mysqldump
+ gcpuser1.mysql_db                                          This role is helpful to install mysqldb
+ geerlingguy.mysql                                          MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ geerlingguy.php-mysql                                      PHP MySQL support for Linux.
+ ginsys.mysql                                               ansible role for mysql
+ gmirocha.mysql_server                                      Instalacao e Configuracao do servidor MySQL
+ gmpereir.mysql_ansible                                     Instalacao e Configuracao do servidor MySQL
+ gmpereir.mysql_ansiblenovo                                 Instalacao e Configuracao do servidor MySQL
+ gnishanth4.mysql                                           MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ goldstrike77.ansible_role_linux_mysql                      your description
+ goloxy.ansible-role-mysql                                  MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ GR360RY.kodi-mysql                                         Configure and Install Mysql Database for Kodi
+ gregdek.mysql                                              MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ grkamlesh.ansibl_role_mysql                                software engineer
+ grpandurangi.mysql_db                                      DevOps Architect
+ guisea.ansible-role-mysql                                  MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ guisea.automysqlbackup                                     Install and configure AutoMySQLBackup utility
+ guiselin.mysql-server                                      Instalacao e Configuracao do servidor MySQL
+ Gustavo-cloud.mysql-server                                 Instalacao e Configuracao do servidor MySQL
+ gustavogcruz.mysql-server                                  Instalacao e Configuracao do servidor MySQL
+ guxiaobai.mysql                                            MySQL server for Ubuntu
+ gwenlei.wordpress-mysql                                    install mysql for wordpress
+ gzeel.mysql                                                MySQL server for Debian/Ubuntu.
+ gzeel.php_mysql                                            PHP MySQL support for Linux.
+ HanXHX.mysql                                               Install and configure MariaDB (and Galera Cluster) on Debian
+ harista.ansible_role_mysql                                 DevOps Engineer
+ haseemsaeed123.ansible_role_mysql                          your description
+ hb008.ansible_role_mysql                                   System Integrator
+ hdharrsun.mysql                                            Ansible role to deploy MySQL database server.
+ heremias.php_mysql                                         PHP MySQL support for Linux.
+ homburg.docker-ansible-mysql                               Role to install mysql, create database, user and handle privilleges.
+ hrishabhsharma.wordpress_mysql                             your role description
+ hspaans.automysqlbackup                                    Automated tool to make periodic backups of MySQL databases
+ hxpro.mysql                                                Install MySQL 5.7 Community Edition
+ hybridadmin.mysql                                          A role to install standalone or clustered mysql/mariadb servers on supported distros
+ iaroslavb.mysql                                            MySQL server installation on Ubuntu Linux
+ IbrahimMohammad.mysql_secure_installation                  Ansible role to improve MariaDB/MySQL installation security. It do what mysql_secure_installation script do.
+ ibuler.test-galaxy-mysql                                   test ansible role
+ icalvot.ansible_roles_mysql                                Solution Architect
+ idealista.mysql_role                                       MySQL server installation role
+ idealista.mysql-role                                       MySQL role
+ idealista.prometheus_mysqld_exporter_role                  Prometheus MySQL exporter
+ idealista.prometheus_mysqld_exporter-role                  Prometheus MySQL exporter
+ igorhrq.mysql-server                                       Instalacao e Configuracao do servidor MySQL
+ inboxrakesh.mysql                                          Ansible role to deploy MySQL database server
+ infn-bari-school.mysql                                     Install and configure mysql (mariadb)
+ injectedMonkey.mysql                                       mysql role for personal use.
+ inmotionhosting.mysql                                      Modular Ansible Role for deploying and configuring MySQL/MariaDB
+ inthebackofmymind.mysql_db                                 NA
+ ioguimaraes.mysql_server                                   Instalacao e Configuracao do servidor MySQL
+ itexia.create-mysqldb-and-user-using-plesk-api             Add mysql db and mysql user for Plesk
+ ivanalves22.mysql_server                                   Instalacao e Configuracao do servidor MySQL
+ jcdarwin.mysql                                             An Ansible role that installs and configures mysql on Ubuntu.
+ jebovic.mysql                                              Install and configure MySQL, add default user and default database
+ jeffhung.mysql                                             Ansible playbook for installing MySQL Server on CentOS/Debian Linux
+ jibsan94.ansible_mysqldb                                   MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ joewen85.ansible_docker_mysql                              docker MySQL8
+ jonpugh.ansible_role_mysql                                 MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ joshuacherry.ansible_role_mysql                            MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ jsecchiero.mysql-innobackupex                              backup mysql using innobackupex
+ jugggao.mysql                                              Install and configure mysql on your system.
+ juju4.mysql                                                MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ juliovsm.mysql_server                                      Instalacao e Configuracao do servidor MySQL
+ junkytesty.ansible-role-mysql-test                         MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ justereseau.mysql                                          MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ kaihei777.ansible_role_mysql_community_client              Installs the MySQL Community Client for RHEL/CentOS
+ KAMI911.mysql                                              MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ kanedafromparis.xwiki-mysql                                This module should be used to install mysql for xwiki from the set of ansible playbook from (https://github.com/kanedafromparis). The first is ansible-xwiki-example (https://https://github.com/kanedafromparis/ansible-xwiki-example)
+ kaos2oak.mysql                                             Install MySQL
+ kartz20n.ansible_role_mysql                                your role description
+ kbrebanov.mysql                                            Installs and configures MySQL
+ kikkurusreedhar.mysql                                      Ansible role to deploy MySQL database server.
+ kishorerv25.mysql                                          This role installs mysql database
+ kudaliar032.mysql_database_duplicator                      Duplicate MySQL database to other server
+ kumar1236.ansible_role_mysql5_7                            Systems Engineer
+ kumarcraja.ansible_role_mysql                              Team Lead HPC
+ kurron.mysql                                               MySQL server.
+ kyxap1.mysql-manage                                        Role to manage MySQL users and databases
+ kzap.mysql                                                 ansible role for mysql
+ labpositiva.mysql                                          Ansible role to install mysql
+ lammensj.percona-mysql                                     ansible galaxy role to install percona-server
+ larixsource.ec2-mysql                                      Role to install mysql on ec2 using an ebs volume
+ leadlineit.mysql_server                                    Install and configure MySQL Community Server 8.0
+ leafnode.mysql                                             role for mysql
+ leandromoreirati.mysql-server                              Instalacao e Configuracao do servidor MySQL
+ leaoereno.mysql_server                                     Instalacao e Configuracao do servidor MySQL
+ lechuckroh.mysql                                           Manage MySQL
+ leo9440.mysql_server                                       Instalacao e Configuracao do servidor MySQL
+ leogiraldimg.mysql_server                                  Instalacao e Configuracao do servidor MySQL
+ leopguimaraes.mysql_server                                 Instalacao e Configuracao do servidor MySQL
+ lferreira1980.mysql_server                                 Instalacao e Configuracao do servidor MySQL
+ lifeofguenter.mysql                                        Installs & configures MySQL on Debian-like systems.
+ limepepper.mysql                                           Install mysql, perform basic security hardening, run tests
+ LIP-Computing.mysql                                        MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ livelabs4linux.mysql_server                                Instalacao e Configuracao do servidor MySQL
+ lordoftheflies.ansible_role_mysql                          Ansible Galaxy role for maintain Mysql.
+ lorena1205.mysql_server                                    Instalacao e Configuracao do servidor MySQL
+ lpetreca.mysql_server                                      Instalacao e Configuracao do servidor MySQL
+ lucasike.mysql-server                                      Instalacao e Configuracao do servidor MySQL
+ luisico.mysql                                              Install and configure MySQL/MariaDB database servers
+ luizgama13.mysql_server                                    Instalacao e Configuracao do servidor MySQL
+ lukasz-zaroda.mysql                                        MySQL installation, configuration, and easy user/database management.
+ mafalb.ansible_role_mysql                                  MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ manala.mysql                                               Handle mysql
+ marcelocorreia.mysql-install                               MySQL installer
+ marfebr.mysql-server                                       Instalacao e Configuracao do servidor MySQL
+ mariuszczyz.centos_mysql                                   CentOS 7 MySQL Installation and Configuration Role
+ lyrasis.automysqlbackup                                    Install and configure automysqlbackup utility
+ markwilde.php-mysql                                        An Ansible role for installing MySQL module for PHP.
+ matheusmiyahira.4linux_4511_mysql_server                   Instalacao e Configuracao do servidor MySQL
+ MaximeThoonsen.automysqlbackup                             Install and configure automysqlbackup utility
+ mediapop.mysql-server                                      Preconfigured for the web to support emojis and timezones.
+ memiah.mysql-s3-backup                                     MySQL to Amazon S3 backup.
+ memiah.mysql-s3-restore                                    Amazon S3 to MySQL restore.
+ memoor72.ansible_role_mysql                                Devops Engineer
+ mhmh9711.ansible_role_mysql                                DevOps engineer
+ mhthaque.ansible_role_mysqldb                              Platform Operations Lead Engineer
+ michaelcoburn.percona_mysql                                An Ansible role for Percona Server (MySQL)
+ MichaelRigart.mysql                                        An ansible role for installing and configuring Postgresql client / server
+ MicroPyramid.mysql                                         Ansible script to install MySQL over Ubuntu server.
+ azzazzel.liferay-db-mysql                                  Installs MySQL database
+ mjanser.mysql                                              Installs MySQL or MariaDB
+ mkubenka.mysql                                             MySQL Role.
+ mm0.percona-mysql-server                                   An Ansible role that installs and configures Percona MySQL Cluster
+ mmreddy1582.ansible_mysql_role_redhat6                     Unix SME
+ mmumshad.mysql                                             Solutions Architect
+ morbidick.ansible-role-pecl-mysql-legacy                   Legacy MySQL functions for PHP7
+ mouadmem16.ansible_role_mysql_db                           mysql installation role with basic configuration
+ mphamib.ansible_role_mysql                                 your role description
+ mrlesmithjr.mariadb-mysql                                  An Ansible role to install/configure MariaDB MySQL
+ mrlesmithjr.mysql                                          Ansible role to install/configure MySQL
+ mstantoncook.mysql                                         MySQL server for RHEL/CentOS and Debian/Ubuntu
+ mstantoncook.php-mysql                                     PHP MySQL support for RedHat/CentOS and Debian/Ubuntu
+ muhametkaqandolli.ansible_role_mysql                       DevOps Engineer
+ murhum.ansible_role_mysql                                  Junior DevOps
+ mvasilenko.mysql                                           MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ mwanjura.mysql                                             MySQL server for RHEL/CentOS 6.x and Debian/Ubuntu
+ nabello.secure_mysql                                       Ansible galaxy role to secure mysql or mariadb relational database installations.
+ naijavijayank.mysql                                        Role to set up mysql
+ ned300889.mysql                                            Mysql test setup
+ neeyoma.ansible_role_mysql                                 mysql role to install database tier for application
+ net2grid.mysql                                             MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ net2grid.mysql-deploy                                      MySQL server data import.
+ net2grid.php-mysql                                         PHP MySQL support for Linux.
+ netzwirt.mysql-server                                      Install mysql-server on Ubuntu/Debian with random root password (will be written to /root/.my.cnf)
+ newswangerd.mysql_db                                       Add or remove MySQL databases from a remote host.
+ newswangerd.mysql_replication                              Manage MySQL replication
+ newswangerd.mysql_user                                     Adds or removes a user from a MySQL database.
+ newswangerd.mysql_variables                                Manage MySQL global variables
+ ngpestelos.mysql                                           Installs MySQL
+ nleutner.mysqlbackup                                       MySQL / MariaDB backup role for RHEL/CentOS
+ Nogueirawash.mysql-server                                  Instalacao e Configuracao do servidor MySQL
+ novuso.mysql                                               MySQL for Ubuntu 14.04
+ nycrecords.mysql                                           MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ obynodavid12.ansible_role_mysql                            Solutions Architect
+ officel.mysql56                                            install MySQL 5.6
+ olo-dw.ansible-role-mysql                                  MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ ombou.ansible_mysql_backup                                 Tech Lead
+ ome.mysql_backup                                           Setup a cron job for regular full Mysql/Mariadb database dumps
+ ontic.mysql                                                This role installs MySQL on RedHat/CentOS and Debian/Ubuntu Linux servers.
+ openapphack.mysql                                          MySQL server for Debian/Ubuntu
+ openapphack.php-mysql                                      PHP MySQL support for Debian/Ubuntu
+ openmicroscopy.mysql-backup                                Setup a cron job for regular full Mysql/Mariadb database dumps
+ opichon.docker-mysql                                       Install mysql as a docker container
+ opichon.mysql-backup                                       Backup mysql database to AWS S3 via docker container
+ opichon.mysql-setup                                        Sets up mysql directories
+ orlandosantos.mysql_server                                 Instalacao e Configuracao do servidor MySQL
+ panickervinod.openapphack-mysql                            MySQL server for Debian/Ubuntu
+ panickervinod.openapphack-php-mysql                        PHP MySQL support for Debian/Ubuntu
+ paogitpao.ansible_role_mysql_db                            your description
+ pasquivis.ansible_role_mysql                               Devops_Team_Lead
+ pauliceman.ansible_role_mysql                              Solutions Architect
+ paulthed.php-mysql                                         PHP MySQL support for RedHat/CentOS/Debian/Ubuntu
+ personnage.php-mysql                                       PHP MySQL support for RedHat/CentOS and Debian/Ubuntu.
+ phansible.mysql                                            An Ansible Role that installs MySQL on Ubuntu specifically created with Phansible in mind.
+ piratadoors.mysql-server                                   Instalacao e Configuracao do servidor MySQL
+ piyuesh23.mysql                                            Mysql server for Debian.
+ piyuesh23.piyuesh23_mysql                                  Mysql server for Debian.
+ plumelo.mysql                                              Ansible role to install MySQL
+ pm5.mysql-server                                           Install mysql-server package
+ prachikakanodia.wordpress_mysql                            your role description
+ pulse-mind.mysql                                           MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ purplenetwork.mysql-server                                 Install MySql server
+ pylabs.mysqld_exporter                                     Setup mysqld exporter
+ qiaofeng1227.role_mysql                                    MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ raresociopath.mysql                                        ansible role for mysql
+ racke.mysql                                                MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ radamanth.mysql-ansible                                    Install mysql on an ubuntu trusty server, set the default mysql root password.
+ raguilera82.mysql                                          MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ rajaniesh.ansible_role_mysqldb                             Solution Architect
+ ramiltonjr.mysql_server                                    Instalacao e Configuracao do servidor MySQL
+ RamjiVE.mysql                                              ansible role for mysql
+ raptas.mysql                                               This role will install and configure mysql database for wordpress
+ rchouinard.mysql-community                                 MySQL Community Server
+ rchouinard.mysql-community-repo                            MySQL Community YUM Repositories
+ rchouinard.repo_mysql_community                            MySQL Community Repository for RHEL/Fedora
+ rdoppala.mysql                                             System consultent
+ RealSalmon.mysql-client                                    Install mysql client and development libraries
+ redesbahia.mysql-server                                    Instalacao e Configuracao do servidor MySQL
+ renkeju.ansible_role_php_mysql                             PHP MySQL support for Linux.
+ Rheinwerk.mysql                                            Installs and configures mysql
+ Rheinwerk.mysql_client                                     Installs Percona MySQL Client Tools
+ Rheinwerk.mysql_users                                      Manages users and databases for a MySQL compatible DB server like MySQL, Galera etc.
+ riaf.mysql                                                 This role installs and configures the MySQL.
+ robertdebock.mysql                                         Install and configure mysql on your system.
+ robertofsilva.mysql-server                                 Instalacao e Configuracao do servidor MySQL
+ robertolopesmendonca.mysql_server                          Instalacao e Configuracao do servidor MySQL
+ RobertoSolis.mysql                                         MySQL server for RHEL/CentOS and Debian/Ubuntu
+ RobertoSolis.php-mysql                                     PHP MySQL support for RedHat/CentOS and Debian/Ubuntu
+ Robr3rd.repo-mysql                                         MySQL Repositories
+ superlumic.superlumic-mysql                                Ansible role to setup MySQL (Percona) on OSX. This role is part of the Superlumic project that aims to simplify repeat computer setups on OSX, 10.10 and up.
+ roger827.mysql_server                                      Instalacao e Configuracao do servidor MySQL
+ rogeriosp3000.mysql_server                                 Instalacao e Configuracao do servidor MySQL
+ rogerscuall.ansible-role-mysql                             MySQL server for RHEL/CentOS and Debian/Ubuntu
+ rooty.mysql                                                MySQL 5.6 provision role
+ royrui000000.udemy_ansible_advanced_ansible_role_mysql     Software Developer
+ rsaggino.mysql_ansible_repo                                your description
+ rtxverma123.ansible_role_mysql                             your role description
+ saadi60pk.mysql                                            Opentech
+ salandur.mysql                                             Manages MySQL
+ samimcloud2020.ansible_role_mysql                          Install mysql database.
+ sammic30.mysql                                             Sr. Engineer
+ sandy702.ansible_role_mysql                                Devops Engineer
+ sansible.mysql                                             MySQL Server installation
+ satyaranjan18.mysql                                        mysql
+ saurabhdudeja82.ansible_role_mysql                         Senior Solution Architect
+ sbesson.mysql_backup                                       Setup a cron job for regular full Mysql/Mariadb database dumps
+ sbitio.mysql                                               Manage MySQL. Supports master-slave replication setup.
+ scheide.mysql_server                                       Instalacao e Configuracao do servidor MySQL
+ npm.percona-mysql                                          Ansible playbook to install percona MySQL server
+ ShadowKoBolt.mysql                                         Simple role for installing mysql and setting up db and user
+ sharath27h.ansible_role_mysql                              Software Engineer
+ shashikantg1984.ansible_role_mysql                         your role description
+ shashikhanal.ansible_role_mysql                            Systems Engineer
+ shehzadashiq.ansible_role_mysql                            your description
+ shifteoops.mysql_role                                      Composer for Ubuntu.
+ siansiansu.mysql                                           MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ sidmanish.ansible_role_mysql                               Devops Engineer
+ Silencerco.mysql-server                                    Role for MySQL server on MacOSX.
+ singleplatform-eng.ansible-role-mysql                      MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ sivaramappathurai.mysql                                    Ansible role to deploy MySQL database server.
+ smarlaku820.mysql_db                                       Install mysql database on debian os.
+ smstong.ansible_role_mysql                                 mysql server role
+ softasap.sa-mysql                                          Alternative fork to mysql with it's own specifics and database engines
+ softasap.sa_mysql_galera                                   Alternative fork to mysql with it's own specifics and database engines
+ softasap.sa-mysql-percona                                  Percona Server for MySQL is a free, fully compatible, enhanced, open source drop-in replacement for MySQL that provides superior performance, scalability and instrumentation
+ sorrowless.prometheus_mysqld_exporter                      Ansible role to deploy Prometheus mysqld exporter
+ sotomma.ansible_role_mysql                                 your role description
+ squallm3.ansible_role_mysql                                Ansible Capo
+ stalenov.ansible_role_mysql                                install mysql and setup database
+ stancel.create_mysql_dbs_and_users                         Creates one or more MySQL databases and users.
+ stancel.remove_mysql_dbs_and_users                         Removes one or more MySQL databases and users.
+ stancel.setup-mysql-backups                                Role to have a bash script run nightly on a cron job to backup a list of MySQL/MariaDB databases
+ sujankumar4593.mysql                                       Ansible role to deploy MySQL database server.
+ suvishesh.mysql_ansible_role                               sys eng
+ szEvEz.ansible_mysql_hardening                             This Ansible playbook provides security configuration for mysql.
+ TalLannder.mysql                                           Role to install MySQL
+ talluru37.ansible_role_mysql                               install mysql database
+ taodong.mysql-general-linux                                MySQL community server for Amazon Linux or General Linux
+ ten7.mysql_backup                                          Backup you MySQL and MariaDB databases to S3 or SFTP
+ terbolous.mysql                                            MySQL install and configuration (hardening, databases, users, ...)
+ thaygneel.mysql_server                                     Instalacao e Configuracao do servidor MySQL
+ thecicco.mysqlsh_plugin_role                               install mysqlsh-plugins for manage proxysql-plugin with Mysql8.0 InnoDB Replication
+ theko2fi.mysql_backup_azblob                               Schedule MySQL database backup and optionally upload to Azure Blob storage container
+ themaniskshah.ansible_role_mysql                           System engineer
+ thorian93.mysql                                            MySQL Database
+ tigr1991.mysql                                             your description
+ tleguern.mysql                                             MySQL role derived from Jeff Geerling
+ tmas0.mysql                                                ansible role for mysql
+ tmeralus.mysql_cluster                                     mysql cluster setup for Linux.
+ todayislegday.ansible_role_mysqldb                         your role description
+ toilops.install-mysql                                      MySQL install and configuration role
+ tonythomasm.ansible_role_mysql                             your description
+ trevorr.mysql                                              MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ treyff.mysql_server                                        Instalacao e Configuracao do servidor MySQL
+ trombik.mysql                                              Configures MySQL
+ troyxmccall.mysql                                          MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ tschifftner.automysqlbackup                                Installs automysqlbackup on Debian/Ubuntu linux servers.
+ tschifftner.mysql                                          Installs mysql 5.7 on Debian/Ubuntu linux servers.
+ Uccio.automysqlbackup                                      This role install automysqlbackup from the latest version
+ umeshravi0595.mysql                                        Ansible role to deploy MySQL database server.
+ ussrlongbow.mysql                                          Ansible role for installing MySQL from OS repo
+ v0rts.mysql                                                MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ vahubert.ansible_role_mysql                                MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ vaizard.mage_mysql                                         MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ vanessakovalsky.mysql                                      MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ varunshivaram.ansible_mysqlubuntu                          DevOps Engineer
+ varunshivaram.ansible_role_centos_mysql                    Devops Engineer
+ vbotka.freebsd_mysql                                       FreeBSD. Install and configure MySQL.
+ veer7.mysql                                                MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ venkat6597.ansible_role_mysql                              DevOps Engineer
+ veyselkaraca.ansible_role_mysql                            Solution Architect
+ vhubertngi.ansible_role_mysql                              MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ viasite-ansible.mysql                                      MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ vicenteg.mysql_server                                      
+ vijay3383.ansible_role_mysql                               Infrastructure Engineer
+ ViniciusRDSilva.mysql-server                               Instalacao e Configuracao do servidor MySQL
+ vinigx457.mysql_server                                     Instalacao e Configuracao do servidor MySQL
+ virhi.mysql                                                Mysql for Debian/Ubuntu.
+ wosg-virtualenv.mysql                                      MySQL server for Debian/Ubuntu
+ wosg-virtualenv.php-mysql                                  PHP MySQL support for Debian/Ubuntu
+ vitvegl.mysql                                              MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ vonq.mysql-server                                          Installs MySQL
+ wahidsadik.ansible-role-mysql                              An Ansible role to install MySQL with some hardening.
+ wcossta.mysql_ansible                                      Instalacao e Configuracao do servidor MySQL
+ weareinteractive.mysql                                     Installs and configures MySQL
+ webbylab.mysql                                             Ansible role for mysql db (Ubuntu server)
+ WebbyLab.mysql                                             Ansible role for mysql db (Ubuntu server)
+ wiltonms.mysql_server                                      Instalacao e Configuracao do servidor MySQL
+ wtanaka.mysql                                              Install mysql server
+ wwenceslau.mysql_server                                    Instalacao e Configuracao do servidor MySQL
+ xcezx.mysql                                                build and install mysql
+ xpxstar.mysql                                              ansible role for mysql
+ xylodev.mysql                                              MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ yashwanth312.ansible_role_wordpress_mysql                  your role description
+ yatesr.mysql                                               Role for installing and manging mysql, mysql dbs, and mysql users.
+ yauh.mysql                                                 Set up a MySQL database
+ ybsgit.ansible_role_mysql                                  install mysql
+ Arkilog.mysql                                              MySQL database ansible role with user and database creation
+ Arkilog.mysql-vagrant                                      MySQL on vagrant vm
+ yfix.mysql                                                 MySQL server for RHEL/CentOS and Debian/Ubuntu
+ yfix.php-mysql                                             PHP MySQL support for RedHat/CentOS and Debian/Ubuntu
+ zaffron.docker_mysql                                       Install Docker CE
+ zauberpony.mysql-query                                     module to insert/update/delete a record in a mysql table
+ zavanryder.ansible_role_mysql                              lackey
+ ZeroDeth.mysql-client                                      Ansible role to install mysql client
+ zhini93.mysql                                              Ansible role to deploy MySQL database server.
+ zxcvbnius.ubuntu-mysql                                     Quick and easy mysql installer
+ belgotux.automysqlbackup                                   Role to install the up-to-date version of automysqlbackup fork https://github.com/belgotux/automysqlbackup of the not maintained wipe_out's project on sourceforge
+ padawalekailas.ansible_role_mysql                          mysql db role
+ klaauser.ansible_role_mysql                                DevOps Engineer
+ shobhitsaxena1424.ansible_role_mysql                       Solutions Architect
+ nileshzarkar.ansible_role_mysql                            your role description
+ sahuankit08.anisble_role_mysql                             Software Engineer
+ danieldiog.ansible_role_mysql                              Estudante
+ gushah.ansible_role_mysql                                  Solutions Architect
+ aacnp.mysql                                                Install and configure mysql on your system.
+ abrasumentes.ansible_roles_mysql                           Sysadmin
+ achilleskal.ansible_mysql8                                 your description
+ adityaprakash_bobby.ansible_role_mysql                     Role for MySQL installation
+ ajesus37.mysql_server                                      Instalacao e Configuracao do servidor MySQL
+ alex_vrt.ansible_role_mysql                                mysql_db_role
+ alfred_leech.ansible_role_mysql                            love 2 travel
+ aliyevh.ansible_role_mysql_docker                          your role description
+ arukumarcit.mysql                                          your description
+ arun_cogniz.ansiblemysqlrole                               your description
+ avinash_mahto.mysql_role_ansible                           This is for mysql database
+ banshee_art.mysql_server                                   Install and configure MySQL Community Server 8.0
+ blesson01.ansible_role_apache_php_mysql_user_web           Installing php7.3,mariadb,apache2
+ cairo_koch_maximilian.ansible_role_db_mysql                This role installs MYSQL database
+ call_learning.ansible-role-mysql                           MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ clay_wangzhi.mysql                                         MySQL server for RHEL/CentOS.
+ cyberitas.mysql57                                          MaySQL Community for Linux
+ danielweeber.mysqld_exporter                               Prometheus' mysqld_exporter for Linux hosts.
+ dba_ray.manage_mysql                                       Manage MySQL with module.
+ dba_ray.mysql                                              Automatically deploy the latest version of mysql based on local installation files, and config mgr architecture and one master and two slave architecture.
+ dba_ray.mysql_docker                                       your role description
+ devikababuraj.mysql                                        MySQL demo role
+ devoinc.mysql_galera                                       Ansible for Galera installation in Ubuntu/RedHat
+ l3d.mysql                                                  Ansible role to install and configure a MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ elan.monitoring_mysqld_exporter                            install the mysqld_exporter
+ erik_larsson.mysql_server                                  Instalacao e Configuracao do servidor MySQL
+ gauravpandey1992.gp_roles_mysql                            your role description
+ gengxiankun.mysql                                          Deploy the gitlab server running under the container via ansible.
+ git_sudha.mysql                                            your description
+ gsergeevich.mysql                                          your description
+ hbz_one.ansible_role_mysql                                 Solutions Architect
+ hoplacloud.dump_mysql                                      Hopla.cloud role for ansible to dump mysql / mariadb with rotation
+ iamabhishek_dubey.ansible_role_mysql                       Install and configure MySQL Server
+ idustbin.mysql_server                                      Ansible Role MySQL-Server 5.7 Community Edition
+ infra_anoop.ansible_role_mysql_db                          tinker with infrastructure automation
+ irlinja.ansible_mysqld_exporter                            Ansible role to install prometheus mysqld_exporter
+ javiercroisade.ansible_role_mysql                          Henlo fren
+ jetune.mysql                                               Mysql installation ansible role [Fork From Jeff Geerling]
+ kodekloud1.mysql                                           your description
+ lawrider.ansible_role_mysql                                Mysql installation
+ ldevops_xyz.mysql_server                                   Instalacao e Configuracao do servidor MySQL
+ lean_delivery.mysql                                        MySQL server for RHEL/CentOS/Debian/Ubuntu
+ lgalagali.mysql_db                                         your description
+ marciobellinido.mysql_server                               Instalacao e Configuracao do servidor MySQL
+ kodekloud1.ansible_role_mysql                              your description
+ mouadazz.ansible_role_mysql                                MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ opstree_devops.mysql                                       Install and configure MySQL with CIS best practices
+ postka.ansible_role_mysql                                  Role for deploying MySQL server, database and user for communication with DB server.
+ ramanjan1.mysql                                            Ansible role to deploy MySQL database server.
+ renatovitorio.mysql_server                                 Instalacao e Configuracao do servidor MySQL
+ renderqwerty.broken_mysql                                  your description
+ respheal.mysql                                             Modular Ansible Role for deploying and configuring MySQL/MariaDB
+ roberto_farias.mysql_server                                Instalacao e Configuracao do servidor MySQL
+ rodrigosix.mysql_server                                    Instalacao e Configuracao do servidor MySQL
+ roshancd.ansible_role_mysql                                DevOps Engineer
+ rotoro_cloud.mysql_role                                    trainer
+ shagor_bd.ansible_role_mysql_test                          Engineer
+ shanmukhanathdereddy.ansible_role_mysql                    your role description
+ shifteo_ops.mysql_role                                     Mysql for Ubuntu.
+ sijo_kurian.mysql_db_role                                  mySQL db install and config
+ sirreeall.mysql                                            Instal mysql 5.7 and validate password plugin
+ soidridine_hub.mysql                                       mysql role for lab purpose
+ somen23122.mysql                                           Ansible role to deploy MySQL database server.
+ sowti.mysql_server                                         Instalacao e Configuracao do servidor MySQL
+ squeekymouse.ansible_role_mysql                            This role installs mariadb and sets up mysql database.
+ stacktonic.mysql                                           MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ stevek_pro.ansible_role_mysql_fedora_server                Solutions Architect
+ supachai_j.ansible_role_mysql                              This is role installation for mysql database
+ suyogshinde942.ansible_role_wordpress_mysql_on_k8s_cluster your role description
+ sys_fs.mysql                                               Install and configure MySQL on Debian and Ubuntu.
+ taranita.ansible_role_mysql                                DevOps Engineer
+ thatdevopneal.ansible_role_mysql                           Software Engineer
+ thibaultmontaufray.ansible_role_mysql                      installs mysql database
+ tpboyle.mysql                                              Installs and secures MySQL server.
+ trainme_lab.ansible_role_mysql                             Systems Engineer
+ ubzyhd.mysql                                               A mysql role to create a database server running MariaDB
+ Vaizard.mage_mysql                                         MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ vanzhiganov.mysql                                          MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ vijayakumar81.mysql                                        your description
+ shaneholloman.mysql                                        MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ garibeirox.mysql_server                                    Instalacao e Configuracao do servidor MySQL
+ curso-4linux.mysql_server                                  Instalacao e Configuracao do servidor MySQL
+ charles-silveira.mysql_server                              Instalacao e Configuracao do servidor MySQL
+ ryanjorgeac.mysql_server                                   Instalacao e Configuracao do servidor MySQL
+ steamulo.mysql                                             MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ antmelekhin.mysqld_exporter                                An Ansible role to install, configure and update the MySQLd Exporter.
+ HiddeHandel.install_mysql                                  install mysql on ubuntu,debian
+ maziz00.mysql                                              Senior DevOps Engineer
+ KrijgEten.ansible_role_mysql                               Install Mysql
+ muratpog.ansible_role_mysql                                your role description
+ LemonJelle.mysql                                           Installs MySQL on a system
+ LemonJelle.php-mysql                                       Installs PHP-MySQL on a system.
+ aldodenhartog03.mysql                                      installs mysql
+ aldodenhartog03.php-mysql                                  installs php-mysql
+ claudiofs1.mysql_server                                    Instalacao e Configuracao do servidor MySQL
+ jeffoaraujo.mysql_server                                   Instalacao e Configuracao do servidor MySQL
+ curso-ansible.mysql_server                                 Instalacao e Configuracao do servidor MySQL
+ WeslleyMiler.mysql_server                                  Instalacao e Configuracao do servidor MySQL
+ clayton-franceschetto.mysql_server                         Instalacao e Configuracao do servidor MySQL
+ webomar.mysql-dbserver                                     Mysql server.
+ JeriJaflaum2.ansible-rol-mysql                             Mysql
+ JeriJaflaum2.php_mysql                                     php_Mysql
+ Prema44.mysql                                              My sql role
+ JelleBrouwer02.mysql                                       your role description
+ JelleBrouwer02.php-mysql                                   your role description
+ lucasrapisardi.mysql_server                                Instalacao e Configuracao do servidor MySQL
+ radcorrea.mysql_server                                     Instalacao e Configuracao do servidor MySQL
+ masoud-maghsoudi.zabbix-server-apache-mysql                This ansible role helps to install Zabbix Server on different Linux distributions utilizing Apache and Mariadb (MySQL)
+ maikson.mysql_server                                       Instalacao e Configuracao do servidor MySQL
+ webdimension-develop.mysql                                 your role description
+ boutetnico.percona_mysql                                   Install and configure Percona Server for MySQL.
+ Sonal0409.mysql-role                                       Role for mysql
+ DucksLock.mysql_server                                     Installeert MySQL op een database server.
+ leandro-araujo-dba.mysql_server                            Instalacao e Configuracao do servidor MySQL
+ ten7.mysql-backup                                          Backup you MySQL and MariaDB databases to S3 or SFTP
+ rodrigomacedo78.mysql_server                               Instalacao e Configuracao do servidor MySQL
+ ricoansible.mysql_server                                   Instalacao e Configuracao do servidor MySQL
+ fabioisraeloliveira.mysql_server                           Instalacao e Configuracao do servidor MySQL
+ DiogenesCosta1.mysql_server                                Instalacao e Configuracao do servidor MySQL
+ andreialcantara.mysql_server                               Instalacao e Configuracao do servidor MySQL
+ alancarlos11.mysql_server                                  Instalacao e Configuracao do servidor MySQL
+ GCassimiroo.mysql_server                                   Instalacao e Configuracao do servidor MySQL
+ ansiblegcp4linux.mysql_server                              Instalacao e Configuracao do servidor MySQL
+ aprat3s.mysql_server                                       Instalacao e Configuracao do servidor MySQL
+ liraalexandre.mysql_server                                 Instalacao e Configuracao do servidor MySQL
+ lucasrodriguesdelira.mysql_server                          Instalacao e Configuracao do servidor MySQL
+ rogeriodelo.mysql_server                                   Instalacao e Configuracao do servidor MySQL
+ LeandroJNB.mysql_server                                    Instalacao e Configuracao do servidor MySQL
+ sahil-ose.mysql                                            mysql installation with dependencies
+ alissonoliveira0607.mysql_server                           Instalacao e Configuracao do servidor MySQL
+ garutilorenzo.ansible-role-linux-mysql                     Install and configure MySQL Server and MySQL InnoDB Cluster
+ S1186041.apache_php_mysql                                  roles van week 4
+ S1186041.mysql                                             roles van week 4
+ luisolf.mysql_server                                       Instalacao e Configuracao do servidor MySQL
+ Erangoud.mysql_role                                        your role description
+ Maxa216m.mysql_ansible_rol                                 Ansible role to install mysql
+ CEnderink.mysql_server                                     Installeert en configureert MySQL-server met een database en gebruiker.
+ mentalhetal.mysql                                          MySQL server for RHEL/CentOS and Debian/Ubuntu.
+ josezipf.zabbix7-mysql-ubuntu2404                          Role para instalar e configurar o MySQL 8 para o Zabbix Server no Ubuntu 24.04
+ XrerXrerX.ansible_mysql_autobackup_S3_aws                  mysql with auto back up store to s3 bucket AWS
+ henriquerafael.mysql_server                                Instalacao e Configuracao do servidor MySQL
+ KevinSchottert.mysql                                       Installeert en configureert MySQL op Ubuntu
+ KevinSchottert.php_mysql                                   Installeert en configureert php_mysql op Ubuntu
+ edutsansible.mysql_server                                  Instalacao e Configuracao do servidor MySQL
+ segato2k.mysql_server                                      Instalacao e Configuracao do servidor MySQL
+ StrafeSmurf03.ansible-role-mysql                           your role description
+ mohamedshahen.mysql-ansible-role                           your role description
+ Jwasper.apache                                             mysql
+ ansiblecaixacurso.mysql_server                             Instalacao e Configuracao do servidor MySQL
+ alexandre6415.mysql_server                                 Instalacao e Configuracao do servidor MySQL
+ wallacysx.mysql_server                                     Instalacao e Configuracao do servidor MySQL
+ ronaldomfirpo.mysql_server                                 Instalacao e Configuracao do servidor MySQL
+ DiegoPMacedo.mysql_server                                  Instalacao e Configuracao do servidor MySQL
+ rtrarbach.mysql_server                                     Instalacao e Configuracao do servidor MySQL
+ anamanso3006.mysql_server                                  Instalacao e Configuracao do servidor MySQL
+ pedrobagatin.mysql_server                                  Instalacao e Configuracao do servidor MySQL
+ rafahall-glitch.mysql_server                               Instalacao e Configuracao do servidor MySQL
+ bsouza-site.mysql_server                                   Instalacao e Configuracao do servidor MySQL
+ AleksFirsta.mysql-cluster                                  Role to install, configure and manage MySQL Server with InnoDB Cluster setup. Includes tasks for repository setup, package installation, security hardening, MySQL configuration, and cluster creation for multi-node high availability.
+
+ bernylinville.mysql                                        MySQL 8.0.43 binary install for openEuler 24.03
+ Nobel-hub.mysql                                            your role description
+ lancevalente.mysql_server                                  Instalacao e Configuracao do servidor MySQL
+ marceosh12.mysql_server                                    Instalacao e Configuracao do servidor MySQL
+ andersonsousadasilva23.mysql_server                        Instalacao e Configuracao do servidor MySQL
+ nicollaspuss.mysql_server                                  Instalacao e Configuracao do servidor MySQL
+ lazypandaface.mysql                                        Solutions Architecture
+ lotusnoir.apps_mysql                                       Deploy mysql (mariadb). (forked from https://galaxy.ansible.com/ui/standalone/roles/geerlingguy/mysql/)
+ solaijr11.mysql_install                                    Install and configure MySQL
+ ArleyCalderon.Ansible-role-mysql                           Solutions Architect
+ DeepakrajRavi.mysql                                        Platform engineer
+ alexfish75.mysql_server                                    Instalacao e Configuracao do servidor MySQL
+ curso-docker.mysql_server                                  Instalacao e Configuracao do servidor MySQL
+ gustavoohrodrigues.mysql_server                            Instalacao e Configuracao do servidor MySQL
+ foobar18.mysql                                             your role description
+ clouddrove.docker-mysql-node-exporter                      This ansible role is used to install Redis server into Docker.
+ clouddrove.mysql                                           This ansible role install mysql server for Debian.
+ ThangNgo123.mysql                                          database mysql

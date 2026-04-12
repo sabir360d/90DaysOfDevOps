@@ -1,0 +1,9 @@
+---
+- name: Test Vault variables
+  hosts: db
+  become: true
+
+  tasks:
+    - name: Check DB password exists
+      debug:
+        msg: "Password set: {{ vault_db_password | length > 0 }}"

@@ -1,0 +1,14 @@
+---
+- hosts: all
+  become: true
+  vars:
+    docker_add_repo: false
+    docker_packages:
+      - docker
+    # Add these two lines to skip the failing Compose plugin tasks
+    docker_install_compose_plugin: false
+    docker_compose_package_state: absent
+
+  roles:
+    - geerlingguy.docker
+
