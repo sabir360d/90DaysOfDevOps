@@ -1,0 +1,24 @@
+---
+# tasks file for common
+
+- name: Update package cache and install common packages
+  dnf:
+    name: "{{ common_packages }}"
+    state: present
+    update_cache: yes
+
+- name: Set hostname
+  hostname:
+    name: "{{ inventory_hostname }}"
+
+- name: Set timezone
+  community.general.timezone:
+    name: "{{ timezone }}"
+
+- name: Create deploy user
+  user:
+    name: deploy
+    groups: wheel
+    append: yes
+    shell: /bin/bash
+    state: present

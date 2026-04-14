@@ -1,0 +1,74 @@
+---
+# tasks file for docker
+# AL2023-compatible version
+# Docker installs via dnf install docker (no repo setup needed)
+# Need python3-docker for Ansible modules
+# ec2-user must be added to docker group
+
+
+- name: Install Docker and Python SDK
+  dnf:
+    name:
+      - docker
+      - python3-docker  # This replaces the pip task for AL2023
+    state: present
+  tags: docker
+
+- name: Start and enable Docker
+  service:
+    name: docker
+    state: started
+    enabled: yes
+  tags: docker
+
+- name: Add users to docker group
+  user:
+    name: "{{ item }}"
+    groups: docker
+    append: yes
+  loop:
+    - ec2-user
+    - deploy
+  tags: docker  
+
+- name: Log in to Docker Hub
+  community.docker.docker_login:
+    username: "{{ vault_docker_username }}"
+    password: "{{ vault_docker_password }}"
+  when: vault_docker_username is defined
+  tags: docker
+
+- name: Remove any container using port 8080
+  shell: |
+    docker ps -q --filter "publish=8080" | xargs -r docker rm -f
+  tags: docker
+
+- name: Pull application image
+  community.docker.docker_image:
+    name: "{{ docker_app_image }}"
+    tag: "{{ docker_app_tag }}"
+    source: pull
+  tags: docker
+
+- name: Run application container
+  community.docker.docker_container:
+    name: "{{ docker_app_name }}"
+    image: "{{ docker_app_image }}:{{ docker_app_tag }}"
+    state: started
+    recreate: yes
+    restart_policy: always
+    ports:
+      - "{{ docker_app_port }}:{{ docker_container_port }}"
+  tags: docker
+  
+- name: Wait for container to be ready
+  uri:
+    url: "http://localhost:{{ docker_app_port }}"
+    status_code: 200
+  register: result
+  retries: 5
+  delay: 3
+  until: result.status == 200
+  tags: docker
+  when: not ansible_check_mode 
+
