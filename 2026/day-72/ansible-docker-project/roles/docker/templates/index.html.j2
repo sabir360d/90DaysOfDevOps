@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Ansible Dashboard</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #1a1a2e; color: #e9e9e9; text-align: center; padding: 50px; }
+        .card { background: #16213e; border-radius: 15px; padding: 40px; display: inline-block; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-top: 6px solid #ff5722; }
+        h1 { color: #ff5722; margin-bottom: 20px; }
+        .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; text-align: left; margin-top: 20px; }
+        .stat-item { background: #0f3460; padding: 10px 20px; border-radius: 8px; }
+        .label { color: #888; font-size: 0.8em; text-transform: uppercase; }
+        .value { font-weight: bold; color: #4ecca3; display: block; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>🚀 Managed by Ansible</h1>
+        <p>Deployment successful on <strong>{{ ansible_date_time.date }}</strong></p>
+        
+        <div class="stat-grid">
+            <div class="stat-item"><span class="label">Hostname</span><span class="value">{{ inventory_hostname }}</span></div>
+            <div class="stat-item"><span class="label">OS Version</span><span class="value">{{ ansible_distribution }} {{ ansible_distribution_version }}</span></div>
+            <div class="stat-item"><span class="label">CPU Cores</span><span class="value">{{ ansible_processor_vcpus }} Cores</span></div>
+            <div class="stat-item"><span class="label">Total Memory</span><span class="value">{{ ansible_memtotal_mb }} MB</span></div>
+            <div class="stat-item"><span class="label">Internal IP</span><span class="value">{{ ansible_default_ipv4.address }}</span></div>
+            <div class="stat-item"><span class="label">Up Since</span><span class="value">{{ ansible_date_time.time }}</span></div>
+        </div>
+    </div>
+</body>
+</html>

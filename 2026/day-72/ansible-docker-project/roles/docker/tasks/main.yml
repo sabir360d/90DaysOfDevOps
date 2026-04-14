@@ -57,10 +57,13 @@
     state: started
     recreate: yes
     restart_policy: always
+    # Add this volumes section:
+    volumes:
+      - "{{ role_path }}/files/index.html:/usr/local/apache2/htdocs/index.html:ro"
     ports:
       - "{{ docker_app_port }}:{{ docker_container_port }}"
   tags: docker
-  
+
 - name: Wait for container to be ready
   uri:
     url: "http://localhost:{{ docker_app_port }}"
