@@ -1,7 +1,5 @@
 # Day 73 -  Introduction to Observability and Prometheus
 
----
-
 ## Task 1: Understand Observability
 
 ### Observability vs Monitoring
@@ -50,8 +48,10 @@
 [Your App] --> traces  --> [OTEL Collector] --> [Grafana]
 
 [Host]     --> metrics --> [Node Exporter] --> [Prometheus]
-[Docker]   --> metrics --> [cAdvisor] --> [Prometheus]
+[Docker]   --> metrics --> [cAdvisor] --> [Prometheus]```
 ```
+
+![T1](screenshots/T1.JPG)
 
 ---
 
@@ -100,6 +100,8 @@ volumes:
 
 * Prometheus UI accessed via EC2 public IP
 * Target `prometheus` shows **UP**
+
+![T2](screenshots/T2.JPG)
 
 ---
 
@@ -151,6 +153,8 @@ prometheus_http_requests_total{handler="/api/v1/query"}
 * Can increase or decrease
 * Example: memory usage
 
+![T3.1](screenshots/T3.1.JPG) ![T3.2](screenshots/T3.2.JPG) ![T3.3](screenshots/T3.3.JPG) ![T3.4](screenshots/T3.4.JPG)
+
 ---
 
 ## Task 4: Learn PromQL Basics
@@ -180,6 +184,8 @@ rate(prometheus_http_requests_total{code!="200"}[5m])
 ```promql
 sum(rate(prometheus_http_requests_total{code!="200"}[5m]))
 ```
+
+![T4.1](screenshots/T4.1.JPG) ![T4.2](screenshots/T4.2.JPG) ![T4.3](screenshots/T4.3.JPG) ![T4.4](screenshots/T4.4.JPG) ![T4.5](screenshots/T4.5.JPG) ![T4.6](screenshots/T4.6.JPG) ![T4.5](screenshots/T4.7.JPG) ![T4.7](screenshots/T4.8.JPG)
 
 ---
 
@@ -243,15 +249,17 @@ scrape_configs:
 **Reason**
 
 * `/metrics` endpoint not available
-* Prometheus returned 404 Not Found
+* notes.app returned 404 Not Found
 
 **Insight**
 
 > Not all applications expose Prometheus-compatible metrics by default.
 
+![T5.1](screenshots/T5.1.JPG) ![T5.2](screenshots/T5.2.JPG)
+
 ---
 
-## Task 6: Explore Data Retention and Storage
+2# Task 6: Explore Data Retention and Storage
 
 ### Disk Usage Check
 
@@ -287,6 +295,8 @@ docker exec prometheus du -sh /prometheus
 
 * Ensures persistence across container restarts
 * Without it → data loss
+
+![T6](screenshots/T6.JPG)
 
 ---
 
