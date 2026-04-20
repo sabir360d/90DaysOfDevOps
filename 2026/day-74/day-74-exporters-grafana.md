@@ -63,6 +63,8 @@ node_memory_MemAvailable_bytes
 rate(node_network_receive_bytes_total[5m])
 ```
 
+![T1](screenshots/T1.JPG) ![T1a](screenshots/T1a.JPG) ![T1b](screenshots/T1b.JPG)
+
 ---
 
 # Task 2: Add cAdvisor (Container Metrics)
@@ -116,6 +118,9 @@ topk(3, container_memory_usage_bytes{name!=""})
 | Metrics Prefix | node_            | container_            |
 | Use Case       | Infra monitoring | Container performance |
 
+
+![T2](screenshots/T2.JPG)
+
 ---
 
 # Task 3: Set Up Grafana
@@ -157,6 +162,8 @@ volumes:
 * Login: admin / admin123
 * Data source → **Successfully queried Prometheus API**
 
+![T3](screenshots/T3.JPG)
+
 ---
 
 # Task 4: Build Custom Dashboard
@@ -196,6 +203,8 @@ container_memory_usage_bytes{name!=""} / 1024 / 1024
 ```promql
 (1 - node_filesystem_avail_bytes{mountpoint="/"} / node_filesystem_size_bytes{mountpoint="/"}) * 100
 ```
+
+![T4](screenshots/T4.JPG)
 
 ---
 
@@ -237,6 +246,8 @@ datasources:
       - ./grafana/provisioning:/etc/grafana/provisioning
 ```
 
+![T5](screenshots/T5.JPG)
+
 ## Why Provisioning?
 
 * Eliminates manual setup
@@ -252,9 +263,13 @@ datasources:
 
 * ID: **1860**
 
+![T6](screenshots/T6.JPG)
+
 ##  cAdvisor Dashboard
 
 * ID: **193**
+
+![T6a](screenshots/T6a.JPG)
 
 ## Outcome
 
@@ -269,7 +284,9 @@ datasources:
 docker compose ps
 ```
 
-# Conclusion
+![T6b](screenshots/T6b.JPG)
+
+# Summary
 
 Day 74 completed a **full observability stack**:
 
