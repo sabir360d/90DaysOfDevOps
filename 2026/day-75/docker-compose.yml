@@ -18,7 +18,7 @@ services:
 
   notes-app:
     image: trainwithshubham/notes-app:latest
-    container_name: notes-app-v2
+    container_name: notes-app
     ports:
       - 8000:8000
     restart: unless-stopped
@@ -79,6 +79,7 @@ services:
   promtail:
     image: grafana/promtail:latest
     container_name: promtail
+    user: root
     ports:
       - "9080:9080"
     depends_on:
