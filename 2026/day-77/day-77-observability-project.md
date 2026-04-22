@@ -15,29 +15,9 @@ All services are orchestrated using **Docker Compose**, forming a complete, end-
 
 ###  Architecture Diagram
 
-```
-                    +----------------------+
-                    |      Grafana         |
-                    | Dashboards + Explore |
-                    +----------+-----------+
-                               |
-    ---------------------------+---------------------------
-    |                          |                          |
-    v                          v                          v
 
-+---------------+        +----------------+        +----------------------+
-|  Prometheus   |        |      Loki      |        |  OTEL Collector      |
-|  (Metrics)    |        |    (Logs)      |        |     (Traces)         |
-+-------+-------+        +--------+-------+        +----------+-----------+
-|                         |                           |
-v                         v                           v
+![Observabilty-Architecture](screenshots/image.png)
 
-+---------------+        +----------------+        +----------------------+
-| Node Exporter |        |   Promtail     |        |   Notes App          |
-| cAdvisor      |        | (Log Shipper)  |        |  (Generates Data)    |
-+---------------+        +----------------+        +----------------------+
-```
----
 
 # Stack Components
 
@@ -60,14 +40,18 @@ v                         v                           v
 ```bash
 git clone https://github.com/LondheShubham153/observability-for-devops.git
 cd observability-for-devops
+tree -I 'node_modules|build|staticfiles|__pycache__'
 docker compose up -d
 docker compose ps
 ```
+![T1.1](screenshots/T1.1.JPG)
 
 ### Result
 
 * All 8 services running successfully
 * No container crashes or restarts
+
+![T1.2](screenshots/T1.2.JPG)
 
 ---
 
@@ -109,6 +93,9 @@ topk(3, container_memory_usage_bytes{name!=""})
 * Real-time CPU, memory, and container metrics visible
 * Full metrics pipeline validated
 
+
+![T2.1](screenshots/T2.1.JPG) ![T2.2](screenshots/T2.2.JPG) ![T2.3](screenshots/T2.3.JPG) ![T2.4](screenshots/T2.4.JPG)
+
 ---
 
 ### Task 3: Logs Pipeline Validation
@@ -146,6 +133,9 @@ sum by (container_name) (rate({job="docker"}[5m]))
 * Promtail successfully shipping logs to Loki
 * Log-to-metric transformation working
 
+
+![T3.1](screenshots/T3.1.JPG) ![T3.2](screenshots/T3.2.JPG) ![T3.3](screenshots/T3.3.JPG) ![T3.4](screenshots/T3.4.JPG) ![T3.5](screenshots/T3.5.JPG)
+
 ---
 
 ### Task 4: Traces Pipeline Validation
@@ -170,6 +160,8 @@ docker logs otel-collector
 * Child span: Database query
 * Attributes visible (HTTP + DB)
 * Trace pipeline fully validated
+
+![T4](screenshots/T4.JPG)
 
 ---
 
@@ -244,6 +236,8 @@ prometheus_target_interval_length_seconds{quantile="0.99"}
 ```promql
 otelcol_receiver_accepted_metric_points
 ```
+
+![T5](screenshots/T5.JPG)
 
 ---
 
