@@ -15,7 +15,7 @@ All services are orchestrated using **Docker Compose**, forming a complete, end-
 
 ###  Architecture Diagram
 
-
+```
                     +----------------------+
                     |      Grafana         |
                     | Dashboards + Explore |
@@ -24,7 +24,6 @@ All services are orchestrated using **Docker Compose**, forming a complete, end-
     ---------------------------+---------------------------
     |                          |                          |
     v                          v                          v
-
 
 +---------------+        +----------------+        +----------------------+
 |  Prometheus   |        |      Loki      |        |  OTEL Collector      |
@@ -37,7 +36,7 @@ v                         v                           v
 | Node Exporter |        |   Promtail     |        |   Notes App          |
 | cAdvisor      |        | (Log Shipper)  |        |  (Generates Data)    |
 +---------------+        +----------------+        +----------------------+
-
+```
 ---
 
 # Stack Components
