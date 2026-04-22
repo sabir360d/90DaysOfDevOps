@@ -1,4 +1,4 @@
-# Day 76 — OpenTelemetry and Alerting
+# Day 76: OpenTelemetry and Alerting
 
 ## Overview
 
@@ -101,6 +101,8 @@ service:
 * Metrics are exposed on port 8889 for Prometheus scraping
 * Traces and logs are printed to console using debug exporter
 
+![T2](screenshots/T2.JPG)
+
 ---
 
 ## Task 3: Sending Traces and Metrics
@@ -125,6 +127,10 @@ Observed:
 * Span name (`test-span`)
 * HTTP attributes
 
+
+![T3.1](screenshots/T3.1.JPG)
+
+
 ---
 
 ### Test Metric
@@ -140,6 +146,8 @@ Queried in Prometheus:
 ```promql
 test_requests_total
 ```
+
+![T3.2](screenshots/T3.2.JPG)
 
 ---
 
@@ -193,6 +201,8 @@ Observed alert state transition:
 
 * Inactive → Pending → Firing
 
+![T4.1](screenshots/T4.1.JPG) ![T4.2](screenshots/T4.2.JPG) ![T4.3](screenshots/T4.3.JPG)
+
 ---
 
 ## Task 5: Grafana Alerting
@@ -208,6 +218,8 @@ Observed alert state transition:
 * Created contact point (Email)
 * Configured notification policy
 * Alerts successfully triggered and delivered
+
+![T5](screenshots/T5.JPG)
 
 ---
 
@@ -253,17 +265,12 @@ App → OTEL Collector → Debug Logs (Future: Jaeger/Tempo)
 
 ---
 
-## Outcome
+## Summary
 
 * Implemented full observability stack
 * Added distributed tracing with OpenTelemetry
 * Enabled proactive alerting with Prometheus and Grafana
 * Built production-style monitoring architecture
-
----
-
-## Key Takeaways
-
 * Observability = Metrics + Logs + Traces
 * OpenTelemetry standardizes telemetry collection
 * Alerting transforms monitoring from reactive → proactive
