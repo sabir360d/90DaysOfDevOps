@@ -3,3 +3,45 @@
 .terraform.lock.hcl
 **/*.zip
 node_modules/
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+*.pid
+
+# Environment
+.env
+.env.*
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Node
+node_modules/
+
+# Build
+build/
+dist/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+
+# Kubernetes
+.kube/
+
+# IDE
+.vscode/
+.idea/
+
+# Caches
+.cache/
+.pytest_cache/
+coverage/
+CLAUDE.md

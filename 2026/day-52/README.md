@@ -81,6 +81,7 @@ Notice that `kubectl get pods` without `-n` only shows the `default` namespace. 
 
 **Verify:** Does `kubectl get pods` show these pods? What about `kubectl get pods -A`?
 **Observation:** kubectl get pods without -n only shows the default namespace. Use -n <namespace> or -A for all.
+
 ---
 
 ### Task 3: Create Your First Deployment
