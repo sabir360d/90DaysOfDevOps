@@ -104,7 +104,7 @@ resources:
 helm install bankapp-mysql-v2 stable/mysql -f mysql-values.yaml
 ```
 
-![T4a](screenshots_78/T4a.JaPG) ![T4b](screenshots_78/T4b.JaPG)
+![T4a](screenshots_78/T4a.JPG) ![T4b](screenshots_78/T4b.JPG)
 
 ---
 
