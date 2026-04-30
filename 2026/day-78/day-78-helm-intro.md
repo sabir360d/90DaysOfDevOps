@@ -44,6 +44,9 @@ curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 helm version
 ```
 
+![T2](screenshots_78/T2.JPG)
+
+
 ---
 
 ## Task 3: Deploying MySQL using a Helm Chart
@@ -70,6 +73,8 @@ helm install bankapp-mysql stable/mysql \
 helm list
 kubectl get pods -l app=bankapp-mysql
 ```
+
+![T3](screenshots_78/T3.JPG) ![T3a](screenshots_78/T3a.JPG) ![T3b](screenshots_78/T3b.JPG)
 
 ---
 
@@ -98,6 +103,8 @@ resources:
 ```bash
 helm install bankapp-mysql-v2 stable/mysql -f mysql-values.yaml
 ```
+
+![T4a](screenshots_78/T4a.JaPG) ![T4b](screenshots_78/T4b.JaPG)
 
 ---
 
@@ -130,6 +137,8 @@ helm rollback bankapp-mysql 1
 helm uninstall bankapp-mysql
 ```
 
+![T5](screenshots_78/T5.JPG)
+
 ---
 
 ## Task 6: Exploring Chart Anatomy
@@ -160,6 +169,8 @@ The `Chart.yaml` file differentiates between the package version and the softwar
 ```bash
 cat mysql/Chart.yaml
 ```
+
+![T6](screenshots_78/T6.JPG)
 
 ---
 
