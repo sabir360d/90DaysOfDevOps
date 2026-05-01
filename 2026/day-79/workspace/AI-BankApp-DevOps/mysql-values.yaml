@@ -1,0 +1,13 @@
+# Updated for stable/mysql chart
+
+mysqlRootPassword: Test@123
+mysqlDatabase: bankappdb
+persistence:
+  size: 5Gi
+resources:
+  limits:
+    cpu: 500m
+    memory: 512Mi
+  requests:
+    cpu: 250m
+    memory: 256Mi

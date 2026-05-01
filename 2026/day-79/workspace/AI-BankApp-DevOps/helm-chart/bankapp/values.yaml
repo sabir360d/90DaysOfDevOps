@@ -1,0 +1,73 @@
+# BankApp configuration
+bankapp:
+  replicaCount: 2
+  image:
+    repository: trainwithshubham/ai-bankapp-eks
+    tag: "latest"
+  resources:
+    requests:
+      memory: "256Mi"
+      cpu: "250m"
+    limits:
+      memory: "512Mi"
+      cpu: "500m"
+  service:
+    type: NodePort
+    port: 8080
+  autoscaling:
+    enabled: false  # Added back to fix the HPA error
+
+# MySQL configuration
+mysql:
+  enabled: true
+  image:
+    repository: mysql
+    tag: "8.0"
+  resources:
+    requests:
+      memory: "256Mi"
+      cpu: "250m"
+    limits:
+      memory: "512Mi"
+      cpu: "500m"
+  persistence:
+    enabled: true
+    size: 5Gi
+    storageClass: standard 
+
+# Ollama AI configuration
+ollama:
+  enabled: true
+  image:
+    repository: ollama/ollama
+    tag: "latest"
+  model: tinyllama
+  persistence:
+    enabled: false  # Corrected fix
+  resources:
+    requests:
+      memory: "512Mi"
+      cpu: "500m"
+    limits:
+      memory: "2Gi"
+      cpu: "1500m"
+
+# Shared configuration
+config:
+  mysqlDatabase: bankappdb
+  ollamaUrl: ""  
+
+# Secrets
+secrets:
+  mysqlRootPassword: Test@123
+  mysqlUser: root
+  mysqlPassword: Test@123
+
+# Storage
+storageClass:
+  create: false 
+
+# Gateway
+gateway:
+  enabled: false
+
