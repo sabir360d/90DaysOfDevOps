@@ -103,7 +103,7 @@ storageClass:
 
 ```yaml
 bankapp:
-  replicaCount: 1
+  replicaCount: 4
   image:
     repository: trainwithshubham/ai-bankapp-eks
     tag: "v1.2.0"
@@ -131,6 +131,10 @@ gateway:
 storageClass:
   create: true
 ```
+
+![T1](screenshots/T1.JPG)
+
+
 
 ## Key Observations
 
@@ -195,6 +199,10 @@ spec:
 ```bash
 helm test bankapp-dev -n dev
 ```
+
+![T2](screenshots/T2.JPG)
+
+![T2a](screenshots/T2a.JPG)
 
 ---
 
@@ -323,6 +331,9 @@ spec:
     limits.cpu: "4"
     limits.memory: 8Gi
 ```
+
+![T5](screenshots/T5.JPG)
+
 
 ## Production Notes
 
